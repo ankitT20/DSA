@@ -1,5 +1,6 @@
 # DSA
-
+[Playlist](https://www.youtube.com/playlist?list=PLQEaRBV9gAFu4ovJ41PywklqI7IyXwr01)
+[Homework](https://drive.google.com/drive/folders/1N9UUtFHRe5a8h1vq3iEVEyvXM5sZDRHv)
 ### Array Problems
 1. Find the smallest/largest number in an array
 2. Second smallest and second largest element in an array
