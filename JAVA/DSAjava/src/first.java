@@ -68,13 +68,23 @@ public class first {
         }
  */
 /* 
-        for (int i =1; i <= 9; i++){
+        for (int i =1; i <= 9; i++) {
             System.out.println(i);
         }
         System.out.println("Done.");
  */
         Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
+        // int n = scn.nextInt();
+        int n = Integer.parseInt(scn.nextLine());
+        String name = scn.nextLine();
+        
+        System.out.println("Dear " + name + ". Here is the counting ");
+        for (int i = 0; i <= n; i++) {
+            System.out.println(i);
+        }
+
+
+
 
     }
 }
