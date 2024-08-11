@@ -1,25 +1,25 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class digits_of_number {
-    // print digits of number
+public class reverse_number {
+    // reverse a number L-20
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        
+
         int nod = 0;
         int temp = n;
         while (temp != 0) {
             temp = temp / 10;
             nod++;
         }
-        
-        int div = (int)Math.pow(10, nod - 1);
-        while (div != 0) {
-            int q = n / div;
+
+        // int div = (int)Math.pow(10, nod -1);
+        while (n != 0) {
+            int q = n % 10;
             System.out.println(q);
 
-            n = n % div;
-            div = div / 10;
+            n = n / 10;
+            // div = div / 10;
         }
     }
 }
