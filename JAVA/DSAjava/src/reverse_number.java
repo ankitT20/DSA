@@ -6,20 +6,10 @@ public class reverse_number {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 
-        int nod = 0;
-        int temp = n;
-        while (temp != 0) {
-            temp = temp / 10;
-            nod++;
-        }
-
-        // int div = (int)Math.pow(10, nod -1);
-        while (n != 0) {
-            int q = n % 10;
-            System.out.println(q);
-
+        while (n > 0) {
+            int dig = n % 10;
             n = n / 10;
-            // div = div / 10;
+            System.out.println(dig);
         }
     }
 }
