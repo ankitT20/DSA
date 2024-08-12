@@ -85,6 +85,3 @@ public class first {
 
     }
 }
-/* 
-cd DSA; git add .; git commit -a -m "additional commit 12 Aug 2024"; git push origin main -u
- */

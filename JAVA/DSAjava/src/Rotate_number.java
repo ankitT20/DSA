@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Rotate_number {
+public class rotate_number {
     // 25398 , 2 = 98253 , -2 = 39825
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
