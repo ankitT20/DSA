@@ -20,7 +20,7 @@ public class pattern_5 {
                 System.out.print("*\t");
             }
             System.out.println();
-            if (i < n / 2) {
+            if (i < n / 2) {  // use <= , if using i = 1 in for loop
                 sp--;
                 st += 2;                
             } else {
