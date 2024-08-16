@@ -24,6 +24,16 @@ public class pattern_10 {
             if (i > 1 && i < n) {
                 System.out.print("*\t");
             }
+            
+            if (i <= n / 2) {
+                os--;
+                is += 2;
+            } else {
+                os++;
+                is -= 2;
+            }
+
+            System.out.println();
         }
     }
 }
