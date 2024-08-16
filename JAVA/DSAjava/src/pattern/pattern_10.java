@@ -15,7 +15,7 @@ public class pattern_10 {
             for (int j = 1; j <= os; j++) {
                 System.out.print("\t");
             }
-            System.out.println("*\t");
+            System.out.print("*\t");
 
             for (int j = 1; j <= is; j++) {
                 System.out.print("\t");
