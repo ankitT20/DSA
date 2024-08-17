@@ -19,3 +19,13 @@ public class pattern_1 {
 // Abstraction is layering 
 // input dekr, output pr vishwas rakhna
 // layers me kaam krte hai, bhar wala loop, andar wale loop pr trust krta hai, ki andar wala loop apna kaam krega, esse hum bade bade program kr lete hai
+/* 
+Input:
+5
+Output:
+*
+*       *
+*       *       *
+*       *       *       *
+*       *       *       *       *
+ */

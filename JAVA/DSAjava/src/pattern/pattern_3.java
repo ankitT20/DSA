@@ -24,3 +24,13 @@ public class pattern_3 {
         }
     }
 }
+/* 
+Input:
+5
+Output:
+                                *
+                        *       *
+                *       *       *
+        *       *       *       *
+*       *       *       *       *
+ */

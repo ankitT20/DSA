@@ -20,3 +20,13 @@ public class pattern_9 {
         }
     }
 }
+/* 
+Input:
+5
+Output:
+*                               *
+        *               *
+                *
+        *               *
+*                               *
+ */

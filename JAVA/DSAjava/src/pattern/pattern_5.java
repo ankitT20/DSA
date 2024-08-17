@@ -30,3 +30,13 @@ public class pattern_5 {
         }
     }
 }
+/* 
+Input:
+5
+Output:
+                *
+        *       *       *
+*       *       *       *       *
+        *       *       *
+                *
+ */

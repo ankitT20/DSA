@@ -38,3 +38,13 @@ public class pattern_10 {
         }
     }
 }
+/*
+Input:
+5
+Output:
+                *
+        *               *
+*                               *
+        *               *
+                *
+*/

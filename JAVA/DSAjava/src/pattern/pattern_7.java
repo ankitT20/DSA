@@ -26,3 +26,13 @@ public class pattern_7 {
         }
     }        
 }
+/* 
+Input:
+5
+Output:
+*
+        *
+                *
+                        *
+                                *
+ */

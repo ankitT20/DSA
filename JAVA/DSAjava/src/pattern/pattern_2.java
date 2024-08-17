@@ -16,3 +16,13 @@ public class pattern_2 {
         }
     }
 }
+/* 
+Input:
+5
+Output:
+*       *       *       *       *
+*       *       *       *
+*       *       *
+*       *
+*
+ */

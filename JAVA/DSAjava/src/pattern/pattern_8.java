@@ -39,3 +39,14 @@ public class pattern_8 {
         }
     }
 }
+
+/* 
+Input:
+5
+Output:
+                                *
+                        *
+                *
+        *
+*
+ */

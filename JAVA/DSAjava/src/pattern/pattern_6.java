@@ -31,3 +31,13 @@ public class pattern_6 {
         }
     }
 }
+/* 
+Input:
+5
+Output:
+*       *       *               *       *       *
+*       *                               *       *
+*                                               *
+*       *                               *       *
+*       *       *               *       *       *
+ */
