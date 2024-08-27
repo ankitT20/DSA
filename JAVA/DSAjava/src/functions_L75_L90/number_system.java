@@ -12,5 +12,5 @@ public class number_system {
 /* 
 Input:
 Output:
-
+n
  */
