@@ -9,6 +9,9 @@ public class number_system {
         int n = scn.nextInt();
 
         int i = scn.nextInt();
+        for (int j = 0; j < args.length; j++) {
+            
+        }
     }
 }
 /* 
