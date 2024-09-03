@@ -9,7 +9,7 @@ public class any_base_addition {
         int n = scn.nextInt();
         int b1 = scn.nextInt();
         int b2 = scn.nextInt();
-        int d = getValue(n, b1, b2);
+        int d = (n, b1, b2);
         System.out.println(d);
     }
 }
