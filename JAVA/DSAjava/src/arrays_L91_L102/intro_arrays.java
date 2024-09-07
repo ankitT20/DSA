@@ -9,6 +9,7 @@ public class intro_arrays {
 
         // 
         int[] arr1;
+        // 
     }
 }
 /* 
