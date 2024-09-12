@@ -22,6 +22,8 @@ public class intro_stacks {
         st.pop();
         System.out.println(st + "->" + st.peek() + " " + st.size());
         st.pop();
+
+        // 
     }
 }
 /* 
