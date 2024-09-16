@@ -22,10 +22,8 @@ public class intro_stacks {
         System.out.println(st + "->" + st.peek() + " " + st.size());
         st.pop();
         System.out.println(st + "->" + " " + " " + st.size());
-
-
-
-         
+        // 
+        
         /* 
         ArrayList<Integer> list = new ArrayList<>(); // Dynamic (no fixed length)
         list.add(10);
