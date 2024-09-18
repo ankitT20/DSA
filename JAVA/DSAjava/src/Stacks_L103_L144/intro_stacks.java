@@ -23,6 +23,8 @@ public class intro_stacks {
         st.pop();
         System.out.println(st + "->" + " " + " " + st.size());
         
+
+        // 
         
         /* 
         ArrayList<Integer> list = new ArrayList<>(); // Dynamic (no fixed length)
