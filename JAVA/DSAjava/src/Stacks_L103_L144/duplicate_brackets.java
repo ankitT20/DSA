@@ -6,6 +6,7 @@ public class duplicate_brackets {
     // Duplicate Brackets   L104
     public static void main(String[] args) {
         // 
+        // 
     }
 }
 /* 
