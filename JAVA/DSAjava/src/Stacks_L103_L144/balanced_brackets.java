@@ -36,6 +36,22 @@ public class balanced_brackets {
                 
             }
         }
+        if (st.size() == 0) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+    }
+
+    public static boolean handleClosing(Stack<Character> st, char corresponding_open_ch) {
+        if (st.size() == 0) {
+            return false;
+        } else if (st.peek() != corresponding_open_ch) {
+            return false;
+        } else {
+            st.pop();
+            return true;
+        }
     }
 }
 /* 
