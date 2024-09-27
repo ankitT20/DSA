@@ -26,8 +26,8 @@ public class balanced_brackets {
                     System.out.println(val);
                     return;
                 }
-            } else if (ch == '[') {
-                boolean val = handleClosing(st, ']');
+            } else if (ch == ']') {
+                boolean val = handleClosing(st, '[');
                 if (val == false) {
                     System.out.println(val);
                     return;
@@ -56,6 +56,13 @@ public class balanced_brackets {
 }
 /* 
 Input:
+[(a + b) + {(c + d) * (e / f)}]
 Output:
-
- */
+true
+*/
+/*
+Input:
+[(a + b) + {(c + d) * (e/f)]}
+Output:
+false
+*/
