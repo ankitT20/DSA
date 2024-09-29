@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 public class next_greater_element_right_alt_sol {
-    // Next Greater Element on the Right   L 109
+    // Next Greater Element on the Right   L 110
     public static void display(int[] a){
         StringBuilder sb = new StringBuilder();
 
