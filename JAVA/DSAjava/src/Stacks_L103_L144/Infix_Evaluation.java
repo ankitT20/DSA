@@ -9,8 +9,19 @@ public class Infix_Evaluation {
         String exp = br.readLine();
     
         // code
-        // 
-        // 
+        
+    }
+
+    public static int precedence(char optor) {
+        if (optor == '+') {
+            return 1;
+        } else if (optor == '-') {
+            return 1;
+        } else if (optor == '*') {
+            return 2;
+        } else {
+            return 2;
+        }
     }
 }
 /* 
