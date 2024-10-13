@@ -12,9 +12,16 @@ public class Prefix_Evaluations_Conversion {
         Stack<Integer> vs = new Stack<>();
         Stack<String> is = new Stack<>();
         Stack<String> ps = new Stack<>();
-        // 
-        // 
-        // 
+        
+        for (int i = exp.length() - 1; i >= 0; i--) {
+            char ch = exp.charAt(i);
+
+            if (ch == '+') {
+                
+            } else {
+                
+            }
+        }
     }
 
 }
