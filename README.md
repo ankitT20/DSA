@@ -35,21 +35,21 @@ See [JAVA/DSAjava/src](https://github.com/ankitT20/DSA/tree/main/JAVA/DSAjava/sr
 
 5. Basic Data Structures 
    - [x] Stacks and Queues
-   - Linked Lists
-   - Generic Tree
-   - Binary Tree
-   - Binary Search Tree
+   - [ ] Linked Lists
+   - [ ] Generic Tree
+   - [ ] Binary Tree
+   - [ ] Binary Search Tree
 
 6. Advanced Data Structure 
-   - Hashmap And Heap
-   - Graphs
+   - [ ] Hashmap And Heap
+   - [ ] Graphs
 
 7. Miscellaneous 
-   - JAVA for C++ Coders
-   - LeetCode
-
+   - [ ] JAVA for C++ Coders
+   - [ ] LeetCode
   
-
+  
+  
 <!--   
 > Key concepts learned from playlist:
 > 
