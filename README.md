@@ -6,8 +6,51 @@
 This repository showcases my journey in learning Java programming through 200 video tutorials. Covering a wide range of topics, from basic data structures and functions to object-oriented programming and stack/queue implementations, I have solved more than 70 questions on key topics such as prime numbers, patterns, arrays, and stacks. Each problem, from basic conditionals to advanced algorithms, has significantly strengthened my understanding of Java and DSA concepts. **This repository reflects my consistent practice and progress toward mastering DSA in Java.**  
 
 See [JAVA/DSAjava/src](https://github.com/ankitT20/DSA/tree/main/JAVA/DSAjava/src)
+  
+
+### Modules and Lectures
+
+1. Basics of Programming 
+    JAVA for C++ Coders
+    Getting Started
+    Patterns
+    Heap 2
+    Function and Arrays
+    2D Arrays
+    String, String Builder and ArrayList
+
+2. Recursion and Backtracking 
+    Introduction to Recursion
+    Recursion in Arrays
+    Recursion with Arraylists
+    Recursion on the way up
+    Recursion Backtracking
+
+3. Dynamic Programming 
+    Dynamic Programming and Greedy
+    Time and Space Complexity
+
+4. OOPS  
+    OOPS
+
+5. Basic Data Structures 
+    Stacks and Queues
+    Linked Lists
+    Generic Tree
+    Binary Tree
+    Binary Search Tree
+
+6. Advanced Data Structure 
+    Hashmap And Heap
+    Graphs
+
+7. Miscellaneous 
+    JAVA for C++ Coders
+    LeetCode
 
   
+
+<!--   
 > Key concepts learned from playlist:
 > 
 > **Data Structures**
@@ -61,7 +104,7 @@ See [JAVA/DSAjava/src](https://github.com/ankitT20/DSA/tree/main/JAVA/DSAjava/sr
 > 1. Prime Factorization (Java Foundation Course | Lecture 29)
 > 2. Pythagorean Triplets (Java Foundation Course | Lecture 30)
 > 3. Pattern-based questions (Pattern-1 to Pattern-20)
-  
+ -->  
 ### Others (DSA in C++)
 > [Playlist](https://www.youtube.com/playlist?list=PLQEaRBV9gAFu4ovJ41PywklqI7IyXwr01)
 > 
