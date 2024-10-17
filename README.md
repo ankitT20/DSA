@@ -5,8 +5,9 @@
 
 This repository showcases my journey in learning Java programming through 200 video tutorials. Covering a wide range of topics, from basic data structures and functions to object-oriented programming and stack/queue implementations, I have solved more than 70 questions on key topics such as prime numbers, patterns, arrays, and stacks. Each problem, from basic conditionals to advanced algorithms, has significantly strengthened my understanding of Java and DSA concepts. **This repository reflects my consistent practice and progress toward mastering DSA in Java.**  
 
-The provided text is a list of Java programming course lectures, covering various topics such as data structures (variables, loops), conditional statements, functions, number systems, arrays, stacks, queues, object-oriented programming (OOPs).
+See [JAVA/DSAjava/src](https://github.com/ankitT20/DSA/tree/main/JAVA/DSAjava/src)
 
+  
 > Key concepts learned from playlist:
 > 
 > **Data Structures**
@@ -61,12 +62,12 @@ The provided text is a list of Java programming course lectures, covering variou
 > 2. Pythagorean Triplets (Java Foundation Course | Lecture 30)
 > 3. Pattern-based questions (Pattern-1 to Pattern-20)
   
-### DSA others (DSA in C++)
+### Others (DSA in C++)
 > [Playlist](https://www.youtube.com/playlist?list=PLQEaRBV9gAFu4ovJ41PywklqI7IyXwr01)
 > 
 > [Homework](https://drive.google.com/drive/folders/1N9UUtFHRe5a8h1vq3iEVEyvXM5sZDRHv)
 > 
-> [Service Based Cpmpany Roadmap](https://docs.google.com/document/d/1G5PaQZnAXNI7X26j-CBAMQY3x1E6_wEnUkLsLnkSGr4/edit)
+> [Service Based Company Roadmap](https://docs.google.com/document/d/1G5PaQZnAXNI7X26j-CBAMQY3x1E6_wEnUkLsLnkSGr4/edit)
 > 
 > ### Array Problems
 > 1. Find the smallest/largest number in an array
