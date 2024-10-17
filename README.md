@@ -8,45 +8,45 @@ This repository showcases my journey in learning Java programming through 200 vi
 See [JAVA/DSAjava/src](https://github.com/ankitT20/DSA/tree/main/JAVA/DSAjava/src)
   
 
-### Modules and Lectures
+## Modules and Lectures
 
 1. Basics of Programming 
-    JAVA for C++ Coders
-    Getting Started
-    Patterns
-    Heap 2
-    Function and Arrays
-    2D Arrays
-    String, String Builder and ArrayList
+   - [x] JAVA for C++ Coders
+   - [x] Getting Started
+   - [x] Patterns
+   - [x] Heap 2
+   - [x] Function and Arrays
+   - [x] 2D Arrays
+   - [x] String, String Builder and ArrayList
 
 2. Recursion and Backtracking 
-    Introduction to Recursion
-    Recursion in Arrays
-    Recursion with Arraylists
-    Recursion on the way up
-    Recursion Backtracking
+   - [x] Introduction to Recursion
+   - [x] Recursion in Arrays
+   - [x] Recursion with Arraylists
+   - [x] Recursion on the way up
+   - [x] Recursion Backtracking
 
 3. Dynamic Programming 
-    Dynamic Programming and Greedy
-    Time and Space Complexity
+   - [x] Dynamic Programming and Greedy
+   - [x] Time and Space Complexity
 
 4. OOPS  
-    OOPS
+   - [x] OOPS
 
 5. Basic Data Structures 
-    Stacks and Queues
-    Linked Lists
-    Generic Tree
-    Binary Tree
-    Binary Search Tree
+   - [x] Stacks and Queues
+   - Linked Lists
+   - Generic Tree
+   - Binary Tree
+   - Binary Search Tree
 
 6. Advanced Data Structure 
-    Hashmap And Heap
-    Graphs
+   - Hashmap And Heap
+   - Graphs
 
 7. Miscellaneous 
-    JAVA for C++ Coders
-    LeetCode
+   - JAVA for C++ Coders
+   - LeetCode
 
   
 
@@ -106,6 +106,7 @@ See [JAVA/DSAjava/src](https://github.com/ankitT20/DSA/tree/main/JAVA/DSAjava/sr
 > 3. Pattern-based questions (Pattern-1 to Pattern-20)
  -->  
 ### Others (DSA in C++)
+> [!NOTE]
 > [Playlist](https://www.youtube.com/playlist?list=PLQEaRBV9gAFu4ovJ41PywklqI7IyXwr01)
 > 
 > [Homework](https://drive.google.com/drive/folders/1N9UUtFHRe5a8h1vq3iEVEyvXM5sZDRHv)
