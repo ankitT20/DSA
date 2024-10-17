@@ -1,9 +1,72 @@
-# DSA
-[Playlist](https://www.youtube.com/playlist?list=PLQEaRBV9gAFu4ovJ41PywklqI7IyXwr01)
+# DSA JAVA Pepcoding
+[Pepcoding DSA - Level 1 | 554 videos](https://www.youtube.com/playlist?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk)  
 
-[Homework](https://drive.google.com/drive/folders/1N9UUtFHRe5a8h1vq3iEVEyvXM5sZDRHv)
+**I am on a journey to master Data Structures and Algorithms in Java**, while also deepening my understanding of core Java concepts. *This repository contains my daily progress with solutions to problems from Pepcoding’s DSA course. I commit regularly to track my growth and improve problem-solving skills.*  
 
-[Service Based Cpmpany Roadmap](https://docs.google.com/document/d/1G5PaQZnAXNI7X26j-CBAMQY3x1E6_wEnUkLsLnkSGr4/edit)
+This repository showcases my journey in learning Java programming through 200 video tutorials. Covering a wide range of topics, from basic data structures and functions to object-oriented programming and stack/queue implementations, I have solved more than 70 questions on key topics such as prime numbers, patterns, arrays, and stacks. Each problem, from basic conditionals to advanced algorithms, has significantly strengthened my understanding of Java and DSA concepts. **This repository reflects my consistent practice and progress toward mastering DSA in Java.**  
+
+The provided text is a list of Java programming course lectures, covering various topics such as data structures (variables, loops), conditional statements, functions, number systems, arrays, stacks, queues, object-oriented programming (OOPs).
+
+Key concepts learned from playlist:
+
+**Data Structures**
+
+1. Variables in Java
+2. Loops (Java Foundation Course | Lecture 8)
+3. Conditional Statements (If, Else if and Else) (Java Foundation Course | Lecture 5)
+
+**Functions**
+
+1. Introduction to Functions
+
+**Number Systems**
+
+1. Decimal to any Base (Introduction to Number System | Lecture 15)
+2. Any base to decimal (Introduction to Number System | Lecture 16)
+3. Any base to any base (Introduction to Number System | Lecture 18)
+
+**Arrays**
+
+1. Arrays - Memory (Introduction to Arrays | Lecture 19)
+2. Find Element in Array (Introduction to Arrays | Lecture 20)
+3. Sum of two arrays (Introduction to Arrays | Lecture 21)
+4. Difference of two arrays (Introduction to Arrays | Lecture 22)
+
+**Stacks and Queues**
+
+1. Introduction to Stacks and its usage
+2. Duplicate Brackets (Introduction to Stacks and its usage | Lecture 23)
+3. Balanced Brackets (Introduction to Stacks and its usage | Lecture 24)
+4. Next Greater Element on the Right (Introduction to Stacks and its usage | Lecture 25)
+5. Stock Span (Introduction to Stacks and its usage | Lecture 26)
+6. Largest Area Histogram (Introduction to Stacks and its usage | Lecture 27)
+7. Sliding Window Maximum (Introduction to Stacks and its usage | Lecture 28)
+8. Infix Evaluation (Introduction to Stacks and its usage | Lecture 29)
+
+**Queues**
+
+1. Queues | Introduction and Usage
+
+**Object-Oriented Programming (OOPs)**
+
+1. OOP's - Classes and Objects
+2. Build Normal Stack (OOP's - Classes and Objects | Lecture 31)
+3. Build Dynamic Stack (OOP's - Classes and Objects | Lecture 32)
+4. Minimum Stack - 1 (OOP's - Classes and Objects | Lecture 33)
+5. Minimum Stack - 2 (OOP's - Classes and Objects | Lecture 34)
+
+**Miscellaneous**
+
+1. Prime Factorization (Java Foundation Course | Lecture 29)
+2. Pythagorean Triplets (Java Foundation Course | Lecture 30)
+3. Pattern-based questions (Pattern-1 to Pattern-20)
+
+### DSA others (DSA in C++)
+>[Playlist](https://www.youtube.com/playlist?list=PLQEaRBV9gAFu4ovJ41PywklqI7IyXwr01)
+
+>[Homework](https://drive.google.com/drive/folders/1N9UUtFHRe5a8h1vq3iEVEyvXM5sZDRHv)
+
+>[Service Based Cpmpany Roadmap](https://docs.google.com/document/d/1G5PaQZnAXNI7X26j-CBAMQY3x1E6_wEnUkLsLnkSGr4/edit)
 
 ### Array Problems
 1. Find the smallest/largest number in an array
@@ -113,5 +176,3 @@
 5. Wildcard pattern matching
 6. The celebrity problem
 7. Travelling salesman problem
-
-
