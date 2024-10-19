@@ -21,3 +21,9 @@ public class Queues_Intro {
         System.out.println(que);
     }
 }
+/* 
+Stack[LIFO], Queue[FIFO]
+add= push,   enque= add
+remove= pop, deque= remove
+get= top,    peek
+ */
