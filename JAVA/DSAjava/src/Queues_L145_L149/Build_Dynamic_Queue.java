@@ -2,8 +2,8 @@ package Queues_L145_L149;
 import java.io.*;
 import java.util.*;
 
-public class Build_Normal_Queue {
-    // Build Normal Queue L 147
+public class Build_Dynamic_Queue {
+    // Build Dynamic Queue L 149
     public static class CustomQueue {
         int[] data;
         int front;
@@ -29,13 +29,24 @@ public class Build_Normal_Queue {
             System.out.println();
         }
 
+        // change this code
         void add(int val) {
             // write ur code here
             if (size == data.length) {
-                System.out.println("Queue overflow");
+                int[] ndata = new int[2 * data.length];
+                for (int i = 0; i < size; i++) {
+                    int idx = (front + i) % data.length;
+                    ndata[i] = data[idx];
+                }
+                data = ndata;
+                front = 0;
+
+                int idx = (front + size) % data.length;
+                data[idx] = val;
+                size++;
             } else {
-                int rear = (front + size) % data.length;
-                data[rear] = val;
+                int idx = (front + size) % data.length;
+                data[idx] = val;
                 size++;
             }
         }
@@ -47,8 +58,10 @@ public class Build_Normal_Queue {
                 return -1;
             } else {
                 int val = data[front];
+
                 front = (front + 1) % data.length;
                 size--;
+
                 return val;
             }
         }
@@ -59,7 +72,8 @@ public class Build_Normal_Queue {
                 System.out.println("Queue underflow");
                 return -1;
             } else {
-                return data[front];
+                int val = data[front];
+                return val;
             }
         }
     }
@@ -94,18 +108,18 @@ public class Build_Normal_Queue {
     }
 }
 /* 
-Normal Queue
+Dynamic Queue
 1. You are required to complete the code of our CustomQueue class. The class should mimic the behaviour of a Queue and implement FIFO semantic.
-2. Here is the list of functions that you are supposed to complete
-     2.1. add -> Should accept new data if there is space available in the underlying 
-     array or print "Queue overflow" otherwise.
-     2.2. remove -> Should remove and return value according to FIFO, if available or 
-     print "Queue underflow" otherwise and return -1.
-     2.3. peek -> Should return value according to FIFO, if available or print "Queue 
+2. Here is the list of functions that are written in the class
+    2.1. add -> Accepts new data if there is space available in the underlying array or 
+    print "Queue overflow" otherwise.
+    2.2. remove -> Removes and returns value according to FIFO, if available or print 
+    "Queue underflow" otherwise and return -1.
+    2.3. peek -> Returns value according to FIFO, if available or print "Queue 
      underflow" otherwise and return -1.
-     2.4. size -> Should return the number of elements available in the queue.
-     2.5. display -> Should print the elements of queue in FIFO manner (space- 
-     separated) ending with a line-break.
+    2.4. size -> Returns the number of elements available in the queue.
+    2.5. display -> Prints the elements of queue in FIFO manner (space-separated) 
+    ending with a line-break.
 3. Input and Output is managed for you.
 Input Format
 Input is managed for you
@@ -153,23 +167,22 @@ Sample Output
 10 20 30 
 10 20 30 40 
 10 20 30 40 50 
-Queue overflow
-10 20 30 40 50 
+10 20 30 40 50 60 
 10
 10
-20 30 40 50 
+20 30 40 50 60 
 20
 20
-30 40 50 
+30 40 50 60 
 30
 30
-40 50 
+40 50 60 
 40
 40
-50 
+50 60 
 50
 50
-
-Queue underflow
-Queue underflow
+60 
+60
+60
  */
