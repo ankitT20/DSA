@@ -1,9 +1,10 @@
 package Linked_Lists_L150_L222;
+
 import java.io.*;
 import java.util.*;
 
-public class Add_Last_In_Linked_List {
-    // Add Last In Linked List L 153
+public class Display_Size_Linked_List {
+    // Display and Size of Linked List L 154
 
     public static class Node {
         int data;
@@ -16,7 +17,6 @@ public class Add_Last_In_Linked_List {
         int size;
 
         void addLast(int val) {
-            // Write your code here
             Node temp = new Node();
             temp.data = val;
             temp.next = null;
@@ -30,16 +30,14 @@ public class Add_Last_In_Linked_List {
 
             size++;
         }
-    }
 
-    public static void testList(LinkedList list) {
-        for (Node temp = list.head; temp != null; temp = temp.next) {
-            System.out.println(temp.data);
+        public int size() {
+            // write code here
+            return size;
         }
-        System.out.println(list.size);
 
-        if (list.size > 0) {
-            System.out.println(list.tail.data);
+        public void display() {
+            // write code here
         }
     }
 
@@ -52,18 +50,27 @@ public class Add_Last_In_Linked_List {
             if (str.startsWith("addLast")) {
                 int val = Integer.parseInt(str.split(" ")[1]);
                 list.addLast(val);
+            } else if (str.startsWith("size")) {
+                System.out.println(list.size());
+            } else if (str.startsWith("display")) {
+                list.display();
             }
             str = br.readLine();
         }
-
-        testList(list);
     }
 }
-/* 
-Add Last In Linked List
+/*
+Display A Linkedlist
+easy Prev Next
 1. You are given a partially written LinkedList class.
-2. You are required to complete the body of addLast function. This function is supposed to add an element to the end of LinkedList. You are required to update head, tail and size as required.
-3. Input and Output is managed for you. Just update the code in addLast function.
+2. Here is a list of existing functions:
+2.1 addLast - adds a new element with given value to the end of Linked List
+3. You are required to complete the body of display function and size
+function
+3.1. display - Should print the elements of linked list from front to end in
+a single line. Elements should be separated by space.
+3.2. size - Should return the number of elements in the linked list.
+4. Input and Output is managed for you.
 Input Format
 Input is managed for you
 Output Format
@@ -75,16 +82,16 @@ Sample Input
 addLast 10
 addLast 20
 addLast 30
+display
+size
 addLast 40
 addLast 50
+display
+size
 quit
-
 Sample Output
-10
-20
-30
-40
-50
+10 20 30
+3
+10 20 30 40 50
 5
-50
  */
