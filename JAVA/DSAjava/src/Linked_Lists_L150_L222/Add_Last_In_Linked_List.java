@@ -17,7 +17,9 @@ public class Add_Last_In_Linked_List {
 
         void addLast(int val) {
             // Write your code here
-            
+            for (int i = 0; i < max; i++) {
+                
+            }
         }
     }
 
