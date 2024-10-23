@@ -56,6 +56,9 @@ public class Get_Value_Linked_List {
 
         public int getFirst() {
             // write your code here
+            for (int i = 0; i < array.length; i++) {
+                
+            }
         }
 
         public int getLast() {
