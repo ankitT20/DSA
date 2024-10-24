@@ -1,9 +1,10 @@
 package Linked_Lists_L150_L222;
+
 import java.io.*;
 import java.util.*;
 
-public class Add_First_Linked_List {
-    // Add First in Linked List L 160
+public class Remove_at_Index_Linked_List {
+    // Remove at Index in Linked List L 166
 
     public static class Node {
         int data;
@@ -88,16 +89,60 @@ public class Add_First_Linked_List {
         }
 
         public void addFirst(int val) {
-            // write your code here
             Node temp = new Node();
             temp.data = val;
             temp.next = head;
             head = temp;
+
             if (size == 0) {
                 tail = temp;
             }
-            
+
             size++;
+        }
+
+        public void addAt(int idx, int val) {
+            if (idx < 0 || idx > size) {
+                System.out.println("Invalid arguments");
+            } else if (idx == 0) {
+                addFirst(val);
+            } else if (idx == size) {
+                addLast(val);
+            } else {
+                Node node = new Node();
+                node.data = val;
+
+                Node temp = head;
+                for (int i = 0; i < idx - 1; i++) {
+                    temp = temp.next;
+                }
+                node.next = temp.next;
+
+                temp.next = node;
+                size++;
+            }
+        }
+
+        public void removeLast() {
+            if (size == 0) {
+                System.out.println("List is empty");
+            } else if (size == 1) {
+                head = tail = null;
+                size = 0;
+            } else {
+                Node temp = head;
+                for (int i = 0; i < size - 2; i++) {
+                    temp = temp.next;
+                }
+
+                tail = temp;
+                tail.next = null;
+                size--;
+            }
+        }
+
+        public void removeAt(int idx) {
+            // write your code here
         }
     }
 
@@ -135,25 +180,37 @@ public class Add_First_Linked_List {
             } else if (str.startsWith("addFirst")) {
                 int val = Integer.parseInt(str.split(" ")[1]);
                 list.addFirst(val);
+            } else if (str.startsWith("addAt")) {
+                int idx = Integer.parseInt(str.split(" ")[1]);
+                int val = Integer.parseInt(str.split(" ")[2]);
+                list.addAt(idx, val);
+            } else if (str.startsWith("removeLast")) {
+                list.removeLast();
+            } else if (str.startsWith("removeAt")) {
+                int idx = Integer.parseInt(str.split(" ")[1]);
+                list.removeAt(idx);
             }
             str = br.readLine();
         }
     }
 }
 /* 
-Add First In Linked List
+Remove At Index In Linked List
 easy  Prev   Next
 1. You are given a partially written LinkedList class.
 2. Here is a list of existing functions:
-    2.1 addLast - adds a new element with given value to the end of Linked List
-    2.2. display - Prints the elements of linked list from front to end in a single line. 
-    All elements are separated by space.
-    2.3. size - Returns the number of elements in the linked list.
-    2.4. removeFirst - Removes the first element from Linked List. 
-    2.5. getFirst - Returns the data of first element. 
-    2.6. getLast - Returns the data of last element. 
-    2.7. getAt - Returns the data of element available at the index passed. 
-3. You are required to complete the body of addFirst function. This function should add the element to the beginning of the linkedlist and appropriately set the head, tail and size data-members.
+2.1 addLast - adds a new element with given value to the end of Linked List
+   2.2. display - Prints the elements of linked list from front to end in a single line. All 
+   elements are separated by space
+  2.3. size - Returns the number of elements in the linked list.
+  2.4. removeFirst - Removes the first element from Linked List. 
+  2.5. getFirst - Returns the data of first element. 
+  2.6. getLast - Returns the data of last element. 
+  2.7. getAt - Returns the data of element available at the index passed. 
+  2.8. addFirst - adds a new element with given value in front of linked list.
+  2.9. addAt - adds a new element at a given index.
+  2.10. removeLast - removes the last element of linked list.
+3. You are required to complete the body of removeAt function. The function should remove the element available at the index passed as parameter. If the size is 0, should print "List is empty". If the index is inappropriate print "Invalid arguments". Also consider the case when list has a single element.
 4. Input and Output is managed for you.
 Input Format
 Input is managed for you
@@ -165,24 +222,24 @@ None
 Sample Input
 addFirst 10
 getFirst
-addFirst 20
+addAt 0 20
 getFirst
 getLast
 display
 size
-addLast 40
+addAt 2 40
 getLast
-addLast 50
+addAt 1 50
 addFirst 30
-removeFirst
+removeAt 2
 getFirst
-removeFirst
-removeFirst
-getAt 3
+removeAt 0
+removeAt 1
+addAt 2 60
 display
 size
-removeFirst
-removeFirst
+removeAt 0
+removeAt 1
 getFirst
 quit
 Sample Output
@@ -192,9 +249,8 @@ Sample Output
 20 10 
 2
 40
-20
-Invalid arguments
-40 50 
-2
-List is empty
+30
+20 40 60 
+3
+40
  */
