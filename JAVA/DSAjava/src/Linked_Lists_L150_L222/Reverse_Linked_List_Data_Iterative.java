@@ -1,9 +1,10 @@
 package Linked_Lists_L150_L222;
+
 import java.io.*;
 import java.util.*;
 
-public class Add_at_Index_Linked_List {
-    // Add at Index in Linked List L 162
+public class Reverse_Linked_List_Data_Iterative {
+    // Reverse a Linked List - Data Iterative L 168
 
     public static class Node {
         int data;
@@ -101,7 +102,6 @@ public class Add_at_Index_Linked_List {
         }
 
         public void addAt(int idx, int val) {
-            // write your code here
             if (idx < 0 || idx > size) {
                 System.out.println("Invalid arguments");
             } else if (idx == 0) {
@@ -117,9 +117,70 @@ public class Add_at_Index_Linked_List {
                     temp = temp.next;
                 }
                 node.next = temp.next;
-                temp.next = node;
 
+                temp.next = node;
                 size++;
+            }
+        }
+
+        public void removeLast() {
+            if (size == 0) {
+                System.out.println("List is empty");
+            } else if (size == 1) {
+                head = tail = null;
+                size = 0;
+            } else {
+                Node temp = head;
+                for (int i = 0; i < size - 2; i++) {
+                    temp = temp.next;
+                }
+
+                tail = temp;
+                tail.next = null;
+                size--;
+            }
+        }
+
+        public void removeAt(int idx) {
+            if (idx < 0 || idx >= size) {
+                System.out.println("Invalid arguments");
+            } else if (idx == 0) {
+                removeFirst();
+            } else if (idx == size - 1) {
+                removeLast();
+            } else {
+                Node temp = head;
+                for (int i = 0; i < idx - 1; i++) {
+                    temp = temp.next;
+                }
+
+                temp.next = temp.next.next;
+                size--;
+            }
+        }
+
+        private Node getNodeAt(int idx){
+            Node temp = head;
+            for (int i = 0; i < idx; i++) {
+                temp = temp.next;
+            }
+            return temp;
+        }
+        public void reverseDI() {
+            // write your code here
+            int li = 0;
+            int ri = size - 1;
+
+            while (li < ri) {
+                Node left = getNodeAt(li);
+                Node right = getNodeAt(ri);
+                
+                int temp = left.data;
+                left.data = right.data;
+                right.data = temp;
+
+                li++;
+                ri--;
             }
         }
     }
@@ -162,25 +223,35 @@ public class Add_at_Index_Linked_List {
                 int idx = Integer.parseInt(str.split(" ")[1]);
                 int val = Integer.parseInt(str.split(" ")[2]);
                 list.addAt(idx, val);
+            } else if (str.startsWith("removeLast")) {
+                list.removeLast();
+            } else if (str.startsWith("removeAt")) {
+                int idx = Integer.parseInt(str.split(" ")[1]);
+                list.removeAt(idx);
+            } else if (str.startsWith("reverseDI")) {
+                list.reverseDI();
             }
             str = br.readLine();
         }
     }
 }
 /* 
-Add At Index In Linked List
+Reverse A Linked List (data Iterative)
 1. You are given a partially written LinkedList class.
 2. Here is a list of existing functions:
-   2.1 addLast - adds a new element with given value to the end of Linked List
-   2.2. display - Prints the elements of linked list from front to end in a single line. All 
-   elements are separated by space
-  2.3. size - Returns the number of elements in the linked list.
-  2.4. removeFirst - Removes the first element from Linked List. 
-  2.5. getFirst - Returns the data of first element. 
-  2.6. getLast - Returns the data of last element. 
-  2.7. getAt - Returns the data of element available at the index passed. 
-  2.8. addFirst - adds a new element with given value in front of linked list.
-3. You are required to complete the body of addAt function. This function should add the element at the index mentioned as parameter. If the idx is inappropriate print "Invalid arguments".
+    2.1 addLast - adds a new element with given value to the end of Linked List
+    2.2. display - Prints the elements of linked list from front to end in a single line. 
+    All elements are separated by space
+    2.3. size - Returns the number of elements in the linked list.
+    2.4. removeFirst - Removes the first element from Linked List. 
+    2.5. getFirst - Returns the data of first element. 
+    2.6. getLast - Returns the data of last element. 
+    2.7. getAt - Returns the data of element available at the index passed. 
+    2.8. addFirst - adds a new element with given value in front of linked list.
+    2.9. addAt - adds a new element at a given index.
+    2.10. removeLast - removes the last element of linked list.
+    2.11. removeAt - remove an element at a given index.
+3. You are required to complete the body of reverseDI function. The function should be an iterative function and should reverse the contents of linked list by changing the "data" property of nodes.
 4. Input and Output is managed for you.
 Input Format
 Input is managed for you
@@ -191,36 +262,17 @@ None
 
 Sample Input
 addFirst 10
-getFirst
-addAt 0 20
-getFirst
-getLast
+addFirst 20
+addLast 30
+addLast 40
+addLast 50
+addFirst 60
+removeAt 2
 display
-size
-addAt 2 40
-getLast
-addAt 1 50
-addFirst 30
-removeFirst
-getFirst
-removeFirst
-removeFirst
-addAt 2 60
+reverseDI
 display
-size
-removeFirst
-removeFirst
-getFirst
 quit
 Sample Output
-10
-20
-10
-20 10 
-2
-40
-20
-10 40 60 
-3
-60
+60 20 30 40 50 
+50 40 30 20 60 
  */

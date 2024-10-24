@@ -66,7 +66,6 @@ public class Display_Size_Linked_List {
 }
 /*
 Display A Linkedlist
-easy Prev Next
 1. You are given a partially written LinkedList class.
 2. Here is a list of existing functions:
 2.1 addLast - adds a new element with given value to the end of Linked List

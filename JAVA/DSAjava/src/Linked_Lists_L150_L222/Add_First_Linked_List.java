@@ -142,7 +142,6 @@ public class Add_First_Linked_List {
 }
 /* 
 Add First In Linked List
-easy  Prev   Next
 1. You are given a partially written LinkedList class.
 2. Here is a list of existing functions:
     2.1 addLast - adds a new element with given value to the end of Linked List

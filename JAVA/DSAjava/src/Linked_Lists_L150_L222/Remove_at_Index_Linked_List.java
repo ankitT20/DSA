@@ -1,5 +1,4 @@
 package Linked_Lists_L150_L222;
-
 import java.io.*;
 import java.util.*;
 
@@ -143,6 +142,21 @@ public class Remove_at_Index_Linked_List {
 
         public void removeAt(int idx) {
             // write your code here
+            if (idx < 0 || idx >= size) {
+                System.out.println("Invalid arguments");
+            } else if (idx == 0) {
+                removeFirst();
+            } else if (idx == size - 1) {
+                removeLast();
+            } else {
+                Node temp = head;
+                for (int i = 0; i < idx - 1; i++) {
+                    temp = temp.next;
+                }
+                
+                temp.next = temp.next.next;
+                size--;
+            }
         }
     }
 
@@ -196,7 +210,6 @@ public class Remove_at_Index_Linked_List {
 }
 /* 
 Remove At Index In Linked List
-easy  Prev   Next
 1. You are given a partially written LinkedList class.
 2. Here is a list of existing functions:
 2.1 addLast - adds a new element with given value to the end of Linked List

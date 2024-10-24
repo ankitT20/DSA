@@ -76,7 +76,6 @@ public class Remove_First_Linked_List {
 }
 /*
 Remove First In Linkedlist
-easy Prev Next
 1. You are given a partially written LinkedList class.
 2. Here is a list of existing functions:
 2.1 addLast - adds a new element with given value to the end of Linked List
