@@ -2,8 +2,8 @@ package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
 
-public class Kth_element_from_end_in_Linked_List {
-    // Kth element from the end in Linked List L 176
+public class Merge_two_sorted_Linked_List {
+    // Merge two sorted Linked List L 180
 
     public static class Node {
         int data;
@@ -203,134 +203,82 @@ public class Kth_element_from_end_in_Linked_List {
         }
 
         public int kthFromLast(int k) {
-            // write your code here
-            Node s = head;  // slow
-            Node f = head;  // fast
-
+            Node slow = head;
+            Node fast = head;
             for (int i = 0; i < k; i++) {
-                f = f.next;
+                fast = fast.next;
             }
 
-            while (f != tail) {
+            while (fast != tail) {
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            return slow.data;
+        }
+
+        public int mid() {
+            Node f = head;
+            Node s = head;
+
+            while (f.next != null && f.next.next != null) {
+                f = f.next.next;
                 s = s.next;
-                f = f.next;
             }
 
             return s.data;
+        }
+
+        public static LinkedList mergeTwoSortedLists(LinkedList l1, LinkedList l2) {
+            // write your code hered
         }
     }
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        LinkedList list = new LinkedList();
 
-        String str = br.readLine();
-        while (str.equals("quit") == false) {
-            if (str.startsWith("addLast")) {
-                int val = Integer.parseInt(str.split(" ")[1]);
-                list.addLast(val);
-            } else if (str.startsWith("size")) {
-                System.out.println(list.size());
-            } else if (str.startsWith("display")) {
-                list.display();
-            } else if (str.startsWith("removeFirst")) {
-                list.removeFirst();
-            } else if (str.startsWith("getFirst")) {
-                int val = list.getFirst();
-                if (val != -1) {
-                    System.out.println(val);
-                }
-            } else if (str.startsWith("getLast")) {
-                int val = list.getLast();
-                if (val != -1) {
-                    System.out.println(val);
-                }
-            } else if (str.startsWith("getAt")) {
-                int idx = Integer.parseInt(str.split(" ")[1]);
-                int val = list.getAt(idx);
-                if (val != -1) {
-                    System.out.println(val);
-                }
-            } else if (str.startsWith("addFirst")) {
-                int val = Integer.parseInt(str.split(" ")[1]);
-                list.addFirst(val);
-            } else if (str.startsWith("addAt")) {
-                int idx = Integer.parseInt(str.split(" ")[1]);
-                int val = Integer.parseInt(str.split(" ")[2]);
-                list.addAt(idx, val);
-            } else if (str.startsWith("removeLast")) {
-                list.removeLast();
-            } else if (str.startsWith("removeAt")) {
-                int idx = Integer.parseInt(str.split(" ")[1]);
-                list.removeAt(idx);
-            } else if (str.startsWith("reverseDI")) {
-                list.reverseDI();
-            } else if (str.startsWith("reversePI")) {
-                list.reversePI();
-            } else if (str.startsWith("kthFromEnd")) {
-                int idx = Integer.parseInt(str.split(" ")[1]);
-                System.out.println(list.kthFromLast(idx));
-            }
-            str = br.readLine();
+        int n1 = Integer.parseInt(br.readLine());
+        LinkedList l1 = new LinkedList();
+        String[] values1 = br.readLine().split(" ");
+        for (int i = 0; i < n1; i++) {
+            int d = Integer.parseInt(values1[i]);
+            l1.addLast(d);
         }
+
+        int n2 = Integer.parseInt(br.readLine());
+        LinkedList l2 = new LinkedList();
+        String[] values2 = br.readLine().split(" ");
+        for (int i = 0; i < n2; i++) {
+            int d = Integer.parseInt(values2[i]);
+            l2.addLast(d);
+        }
+
+        LinkedList merged = LinkedList.mergeTwoSortedLists(l1, l2);
+        merged.display();
+        l1.display();
+        l2.display();
     }
 }
 /* 
-Kth Node From End Of Linked List
+Merge Two Sorted Linked Lists
+easy  Prev   Next
 1. You are given a partially written LinkedList class.
-2. Here is a list of existing functions:
-     2.1 addLast - adds a new element with given value to the end of Linked List
-     2.2. display - Prints the elements of linked list from front to end in a single line. 
-     All elements are separated by space.
-    2.3. size - Returns the number of elements in the linked list.
-    2.4. removeFirst - Removes the first element from Linked List. 
-    2.5. getFirst - Returns the data of first element. 
-    2.6. getLast - Returns the data of last element. 
-    2.7. getAt - Returns the data of element available at the index passed. 
-    2.8. addFirst - adds a new element with given value in front of linked list.
-    2.9. addAt - adds a new element at a given index.
-    2.10. removeLast - removes the last element of linked list.
-    2.11. removeAt - remove an element at a given index
-3. You are required to complete the body of kthFromLast function. The function should be an iterative function and should return the kth node from end of linked list. Also, make sure to not use size data member directly or indirectly (by calculating size via making a traversal). k is a 0-based index. Assume that valid values of k will be passed.
-4. Input and Output is managed for you.
+2. You are required to complete the body of mergeTwoSortedLists function. The function is static and is passed two lists which are sorted. The function is expected to return a new sorted list containing elements of both lists. Original lists must stay as they were.
+3. Input and Output is managed for you.
 Input Format
 Input is managed for you
 Output Format
 Output is managed for you
 Constraints
-1. Size property should not be used directly or indirectly
-2. Constant time, single traversal is expected
-3. Iterative solution, (not recursion) is expected
+1. O(n) time complexity and constant space complexity expected.
 
 Sample Input
-addLast 10
-getFirst
-addLast 20
-addLast 30
-getFirst
-getLast
-getAt 1
-addLast 40
-kthFromEnd 3
-getLast
-addLast 50
-removeFirst
-getFirst
-removeFirst
-removeFirst
-kthFromEnd 0
-removeFirst
-removeFirst
-getFirst
-quit
+5
+10 20 30 40 50
+10
+7 9 12 15 37 43 44 48 52 56
 Sample Output
-10
-10
-30
-20
-10
-40
-20
-50
-List is empty
+7 9 10 12 15 20 30 37 40 43 44 48 50 52 56 
+10 20 30 40 50 
+7 9 12 15 37 43 44 48 52 56 
  */

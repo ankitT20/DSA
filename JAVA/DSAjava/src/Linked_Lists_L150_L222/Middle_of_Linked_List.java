@@ -2,8 +2,8 @@ package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
 
-public class Kth_element_from_end_in_Linked_List {
-    // Kth element from the end in Linked List L 176
+public class Middle_of_Linked_List {
+    // Middle of Linked List L 178
 
     public static class Node {
         int data;
@@ -203,17 +203,28 @@ public class Kth_element_from_end_in_Linked_List {
         }
 
         public int kthFromLast(int k) {
-            // write your code here
-            Node s = head;  // slow
-            Node f = head;  // fast
-
+            Node slow = head;
+            Node fast = head;
             for (int i = 0; i < k; i++) {
-                f = f.next;
+                fast = fast.next;
             }
 
-            while (f != tail) {
+            while (fast != tail) {
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            return slow.data;
+        }
+
+        public int mid() {
+            // write your code here
+            Node s = head;  // slow 
+            Node f = head;  // fast
+
+            while (f.next != null && f.next.next != null) {
                 s = s.next;
-                f = f.next;
+                f = f.next.next;
             }
 
             return s.data;
@@ -270,37 +281,39 @@ public class Kth_element_from_end_in_Linked_List {
             } else if (str.startsWith("kthFromEnd")) {
                 int idx = Integer.parseInt(str.split(" ")[1]);
                 System.out.println(list.kthFromLast(idx));
+            } else if (str.startsWith("mid")) {
+                System.out.println(list.mid());
             }
             str = br.readLine();
         }
     }
 }
 /* 
-Kth Node From End Of Linked List
+Mid Of Linked List
 1. You are given a partially written LinkedList class.
 2. Here is a list of existing functions:
      2.1 addLast - adds a new element with given value to the end of Linked List
      2.2. display - Prints the elements of linked list from front to end in a single line. 
-     All elements are separated by space.
+     All elements are separated by space
     2.3. size - Returns the number of elements in the linked list.
     2.4. removeFirst - Removes the first element from Linked List. 
     2.5. getFirst - Returns the data of first element. 
     2.6. getLast - Returns the data of last element. 
     2.7. getAt - Returns the data of element available at the index passed. 
     2.8. addFirst - adds a new element with given value in front of linked list.
-    2.9. addAt - adds a new element at a given index.
-    2.10. removeLast - removes the last element of linked list.
-    2.11. removeAt - remove an element at a given index
-3. You are required to complete the body of kthFromLast function. The function should be an iterative function and should return the kth node from end of linked list. Also, make sure to not use size data member directly or indirectly (by calculating size via making a traversal). k is a 0-based index. Assume that valid values of k will be passed.
+   2.9. addAt - adds a new element at a given index.
+   2.10. removeLast - removes the last element of linked list.
+   2.11. removeAt - remove an element at a given index
+   2.12 kthFromLast - return kth node from end of linked list.
+3. You are required to complete the body of mid function. The function should be an iterative function and should return the mid of linked list. Also, make sure to not use size data member directly or indirectly (by calculating size via making a traversal). In linked list of odd size, mid is unambigous. In linked list of even size, consider end of first half as mid.
 4. Input and Output is managed for you.
 Input Format
 Input is managed for you
 Output Format
 Output is managed for you
-Constraints
 1. Size property should not be used directly or indirectly
 2. Constant time, single traversal is expected
-3. Iterative solution, (not recursion) is expected
+3. Iterative solution, (not recursion) is expected.
 
 Sample Input
 addLast 10
@@ -311,14 +324,14 @@ getFirst
 getLast
 getAt 1
 addLast 40
-kthFromEnd 3
+mid
 getLast
 addLast 50
 removeFirst
 getFirst
 removeFirst
 removeFirst
-kthFromEnd 0
+mid
 removeFirst
 removeFirst
 getFirst
@@ -328,9 +341,9 @@ Sample Output
 10
 30
 20
-10
+20
 40
 20
-50
+40
 List is empty
  */
