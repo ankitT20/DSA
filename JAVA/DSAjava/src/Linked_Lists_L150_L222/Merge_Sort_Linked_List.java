@@ -257,8 +257,31 @@ public class Merge_Sort_Linked_List {
             return ml;
         }
 
+        public static Node midNode(Node head, Node tail) {
+            Node f = head;  // fast
+            Node s = head;  // slow
+
+            while (f != tail && f.next != tail) {
+                f = f.next.next;
+                s = s.next;
+            }
+
+            return s;
+        }
+
         public static LinkedList mergeSort(Node head, Node tail) {
             // write your code here
+            if (head == tail) {
+                LinkedList br = new LinkedList();
+                br.addLast(head.data);
+                return br;  // return base results
+            }
+
+            Node mid = midNode(head, tail);
+            LinkedList fsh = mergeSort(head, mid);  // First sorted half
+            LinkedList ssh = mergeSort(mid.next, tail);  // Second sorted half
+            LinkedList cl = LinkedList.mergeTwoSortedLists(fsh, ssh);  // complete ist
+            return cl;
         }
     }
 

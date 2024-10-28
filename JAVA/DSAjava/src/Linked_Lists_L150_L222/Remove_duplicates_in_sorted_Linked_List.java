@@ -2,8 +2,8 @@ package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
 
-public class Merge_two_sorted_Linked_List {
-    // Merge two sorted Linked List L 180
+public class Remove_duplicates_in_sorted_Linked_List {
+    // Remove duplicates in a sorted Linked List L 184
 
     public static class Node {
         int data;
@@ -230,33 +230,61 @@ public class Merge_two_sorted_Linked_List {
         }
 
         public static LinkedList mergeTwoSortedLists(LinkedList l1, LinkedList l2) {
-            // write your code here
+            LinkedList ml = new LinkedList();
+
             Node one = l1.head;
             Node two = l2.head;
-
-            LinkedList res = new LinkedList();
-
             while (one != null && two != null) {
                 if (one.data < two.data) {
-                    res.addLast(one.data);
+                    ml.addLast(one.data);
                     one = one.next;
                 } else {
-                    res.addLast(two.data);
+                    ml.addLast(two.data);
                     two = two.next;
                 }
             }
 
             while (one != null) {
-                res.addLast(one.data);
+                ml.addLast(one.data);
                 one = one.next;
             }
 
             while (two != null) {
-                res.addLast(two.data);
+                ml.addLast(two.data);
                 two = two.next;
             }
 
-            return res;
+            return ml;
+        }
+
+        public static Node midNode(Node head, Node tail) {
+            Node f = head;
+            Node s = head;
+
+            while (f != tail && f.next != tail) {
+                f = f.next.next;
+                s = s.next;
+            }
+
+            return s;
+        }
+
+        public static LinkedList mergeSort(Node head, Node tail) {
+            if (head == tail) {
+                LinkedList br = new LinkedList();
+                br.addLast(head.data);
+                return br;
+            }
+
+            Node mid = midNode(head, tail);
+            LinkedList fsh = mergeSort(head, mid);
+            LinkedList ssh = mergeSort(mid.next, tail);
+            LinkedList sl = mergeTwoSortedLists(fsh, ssh);
+            return sl;
+        }
+
+        public void removeDuplicates() {
+            // write your code here
         }
     }
 
@@ -271,40 +299,30 @@ public class Merge_two_sorted_Linked_List {
             l1.addLast(d);
         }
 
-        int n2 = Integer.parseInt(br.readLine());
-        LinkedList l2 = new LinkedList();
-        String[] values2 = br.readLine().split(" ");
-        for (int i = 0; i < n2; i++) {
-            int d = Integer.parseInt(values2[i]);
-            l2.addLast(d);
-        }
-
-        LinkedList merged = LinkedList.mergeTwoSortedLists(l1, l2);
-        merged.display();
         l1.display();
-        l2.display();
+        l1.removeDuplicates();
+        l1.display();
     }
 }
-/* 
-Merge Two Sorted Linked Lists
-easy  Prev   Next
+/*
+Remove Duplicates In A Sorted Linked List
 1. You are given a partially written LinkedList class.
-2. You are required to complete the body of mergeTwoSortedLists function. The function is static and is passed two lists which are sorted. The function is expected to return a new sorted list containing elements of both lists. Original lists must stay as they were.
+2. You are required to complete the body of removeDuplicates function. The
+function is called on a sorted list. The function must remove all duplicates
+from the list in linear time and constant space
 3. Input and Output is managed for you.
 Input Format
 Input is managed for you
 Output Format
 Output is managed for you
 Constraints
-1. O(n) time complexity and constant space complexity expected.
+1. Time complexity -> O(n)
+2. Space complexity -> constant
 
 Sample Input
-5
-10 20 30 40 50
 10
-7 9 12 15 37 43 44 48 52 56
+2 2 2 3 3 5 5 5 5 5
 Sample Output
-7 9 10 12 15 20 30 37 40 43 44 48 50 52 56 
-10 20 30 40 50 
-7 9 12 15 37 43 44 48 52 56 
+2 2 2 3 3 5 5 5 5 5
+2 3 5
  */
