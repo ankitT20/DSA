@@ -2,8 +2,8 @@ package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
 
-public class Odd_Even_Linked_List {
-    // Odd Even Linked List L 186
+public class K_Reverse_Linked_List {
+    // K Reverse in Linked List L 188
 
     public static class Node {
         int data;
@@ -301,7 +301,6 @@ public class Odd_Even_Linked_List {
         }
 
         public void oddEven() {
-            // write your code here
             LinkedList odd = new LinkedList();
             LinkedList even = new LinkedList();
 
@@ -316,9 +315,9 @@ public class Odd_Even_Linked_List {
                 }
             }
 
-            
             if (odd.size > 0 && even.size > 0) {
                 odd.tail.next = even.head;
+
                 this.head = odd.head;
                 this.tail = even.tail;
                 this.size = odd.size + even.size;
@@ -331,6 +330,42 @@ public class Odd_Even_Linked_List {
                 this.tail = even.tail;
                 this.size = even.size;
             }
+        }
+
+        public void kReverse(int k) {
+            // write your code here
+            LinkedList prev = null;
+
+            while (this.size > 0) {
+                LinkedList curr = new LinkedList();
+
+                if (this.size >= k) {
+                    for (int i = 0; i < k; i++) {
+                        int val = this.getFirst();;
+                        this.removeFirst();
+                        curr.addFirst(val);
+                    }
+                } else {
+                    int os = this.size();
+                    for (int i = 0; i < os; i++) {
+                        int val = this.getFirst();;
+                        this.removeFirst();
+                        curr.addLast(val);
+                    }
+                }
+                
+                if (prev == null) {
+                    prev = curr;
+                } else {
+                    prev.tail.next = curr.head;
+                    prev.tail = curr.tail;
+                    prev.size += curr.size;
+                }
+            }
+
+            this.head = prev.head;
+            this.tail = prev.tail;
+            this.size = prev.size;
         }
     }
 
@@ -345,22 +380,22 @@ public class Odd_Even_Linked_List {
             l1.addLast(d);
         }
 
+        int k = Integer.parseInt(br.readLine());
         int a = Integer.parseInt(br.readLine());
         int b = Integer.parseInt(br.readLine());
 
         l1.display();
-        l1.oddEven();
+        l1.kReverse(k);
         l1.display();
         l1.addFirst(a);
         l1.addLast(b);
         l1.display();
     }
 }
-// OOPs advantage - code is modular, readable, clarity , thats why this is writen with upper layer abstraction
 /* 
-Odd Even Linked List
+K Reverse In Linked List
 1. You are given a partially written LinkedList class.
-2. You are required to complete the body of oddEven function. The function is expected to tweak the list such that all odd values are followed by all even values. The relative order of elements should not change. Also, take care of the cases when there are no odd or no even elements. Make sure to properly set head, tail and size as the function will be tested by calling addFirst and addLast.
+2. You are required to complete the body of kReverse function. The function is expected to tweak the list such that all groups of k elements in the list get reversed and linked. If the last set has less than k elements, leave it as it is (don't reverse).
 3. Input and Output is managed for you.
 Input Format
 Input is managed for you
@@ -370,12 +405,13 @@ Constraints
 1. Time complexity -> O(n)
 2. Space complexity -> constant
 Sample Input
-7
-2 8 9 1 5 4 3
-10
+11
+1 2 3 4 5 6 7 8 9 10 11
+3
 100
+200
 Sample Output
-2 8 9 1 5 4 3 
-9 1 5 3 2 8 4 
-10 9 1 5 3 2 8 4 100 
+1 2 3 4 5 6 7 8 9 10 11 
+3 2 1 6 5 4 9 8 7 10 11 
+100 3 2 1 6 5 4 9 8 7 10 11 200 
  */
