@@ -16,6 +16,7 @@ public class Queue_to_Stack_Adapter_Pop_Efficient {
 
         int size() {
             // write your code here
+            // this.size();
         }
 
         void push(int val) {
