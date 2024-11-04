@@ -2,8 +2,8 @@ package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
 
-public class Is_Linked_List_Palindrome {
-    // Is a Linked List Palindrome L 207
+public class Fold_Linked_List {
+    // Fold a Linked List L 211
 
     public static class Node {
         int data;
@@ -396,28 +396,8 @@ public class Is_Linked_List_Palindrome {
             tail.next = null;
         }
 
-        // write your code here
-        private boolean IsPalindromeHelper(Node right) {
-            if (right == null) {
-                return true;
-            }
-            boolean rres = IsPalindromeHelper(right.next);
-            if (rres == false) {
-                return false;
-            } else if (pleft.data != right.data) {
-                return false;
-            } else {
-                pleft = pleft.next;
-                return true;
-            }
-
-        }
-
-        Node pleft;
-        public boolean IsPalindrome() {
+        public void fold() {
             // write your code here
-            pleft = head;
-            return IsPalindromeHelper(head);
         }
     }
 
@@ -432,14 +412,28 @@ public class Is_Linked_List_Palindrome {
             l1.addLast(d);
         }
 
-        System.out.println(l1.IsPalindrome());
+        int a = Integer.parseInt(br.readLine());
+        int b = Integer.parseInt(br.readLine());
+
+        l1.display();
+        l1.fold();
+        l1.display();
+        l1.addFirst(a);
+        l1.addLast(b);
+        l1.display();
     }
 }
 /* 
-Is Linked List A Palindrome?
+Fold A Linked List
 1. You are given a partially written LinkedList class.
-2. You are required to complete the body of IsPalindrome function. The function is expected to check if the linked list is a palindrome or not and return true or false accordingly.
-3. Input and Output is managed for you.
+2. You are required to complete the body of fold function. The function is expected to place last element after 1st element, 2nd last element after 2nd element and so on. For more insight check the example
+Example 1
+1->2->3->4->5
+will fold as
+1->5->2->4->3
+Example 2
+1->2->3->4->5->6
+1->6->2->5->3->4
 Input Format
 Input is managed for you
 Output Format
@@ -450,7 +444,11 @@ Constraints
 
 Sample Input
 5
-1 2 3 2 1
+1 2 3 4 5
+10
+20
 Sample Output
-true
+1 2 3 4 5 
+1 5 2 4 3 
+10 1 5 2 4 3 20 
  */
