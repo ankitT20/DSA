@@ -1,9 +1,9 @@
-package Queues_L145_L149;
+package Queues_L145_L149_L193_L202;
 import java.io.*;
 import java.util.*;
 
-public class Stack_to_Queue_Adapter_Add_Efficient {
-    // Stack to Queue Adapter - Add Efficient L 200
+public class Stack_to_Queue_Adapter_Remove_Efficient {
+    // Stack to Queue Adapter - Remove Efficient L 198
 
     public static class StackToQueueAdapter {
         Stack<Integer> mainS;
@@ -21,7 +21,15 @@ public class Stack_to_Queue_Adapter_Add_Efficient {
 
         void add(int val) {
             // write your code here
+            while (mainS.size() > 0) {
+                helperS.push(mainS.pop());
+            }
+
             mainS.push(val);
+
+            while (helperS.size() > 0) {
+                mainS.push(helperS.pop());
+            }
         }
 
         int remove() {
@@ -30,17 +38,7 @@ public class Stack_to_Queue_Adapter_Add_Efficient {
                 System.out.println("Queue underflow");
                 return -1;
             } else {
-                while (mainS.size() > 1) {
-                    helperS.push(mainS.pop());
-                }
-
-                int val = mainS.pop();
-
-                while (helperS.size() > 0) {
-                    mainS.push(helperS.pop());
-                }
-
-                return val;
+                return mainS.pop();
             }
         }
 
@@ -50,18 +48,7 @@ public class Stack_to_Queue_Adapter_Add_Efficient {
                 System.out.println("Queue underflow");
                 return -1;
             } else {
-                while (mainS.size() > 1) {
-                    helperS.push(mainS.pop());
-                }
-
-                int val = mainS.pop();
-                helperS.push(val);
-
-                while (helperS.size() > 0) {
-                    mainS.push(helperS.pop());
-                }
-
-                return val;
+                return mainS.peek();
             }
         }
     }
@@ -93,9 +80,9 @@ public class Stack_to_Queue_Adapter_Add_Efficient {
     }
 }
 /* 
-Stack To Queue Adapter - Add Efficient
+Stack To Queue Adapter - Remove Efficient
 1. You are required to complete the code of our StackToQueueAdapter class. The class should mimic the behaviour of a Queue and implement FIFO semantic.
-2. Here is the list of functions that are written in the class 
+2. Here is the list of functions that are written in the class
     2.1. add -> Accepts new data if there is space available in the underlying array or 
     print "Queue overflow" otherwise.
     2.2. remove -> Removes and returns value according to FIFO, if available or print 
@@ -109,7 +96,7 @@ Input is managed for you
 Output Format
 Output is managed for you
 Constraints
-Note -> add and size should work in constant time. remove and peek should work in linear time.
+Note -> remove, peek and size should work in constant time. add should work in linear time.
 
 Sample Input
 add 10
