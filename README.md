@@ -35,7 +35,7 @@ See [JAVA/DSAjava/src](https://github.com/ankitT20/DSA/tree/main/JAVA/DSAjava/sr
 
 5. Basic Data Structures 
    - [x] Stacks and Queues
-   - [ ] Linked Lists
+   - [x] Linked Lists
    - [ ] Generic Tree
    - [ ] Binary Tree
    - [ ] Binary Search Tree
