@@ -1,9 +1,10 @@
 package Queues_L145_L149;
+
 import java.io.*;
 import java.util.*;
 
-public class Queue_to_Stack_Adapter_Pop_Efficient {
-    // Queue to Stack Adapter - Pop Efficient L 194
+public class Queue_to_Stack_Adapter_Push_Efficient {
+    // Queue to Stack Adapter - Push Efficient L 196
 
     public static class QueueToStackAdapter {
         Queue<Integer> mainQ;
@@ -21,15 +22,7 @@ public class Queue_to_Stack_Adapter_Pop_Efficient {
 
         void push(int val) {
             // write your code here
-            while (mainQ.size() > 0) {
-                helperQ.add(mainQ.remove());
-            }
-
             mainQ.add(val);
-
-            while (helperQ.size() > 0) {
-                mainQ.add(helperQ.remove());
-            }
         }
 
         int pop() {
@@ -38,7 +31,17 @@ public class Queue_to_Stack_Adapter_Pop_Efficient {
                 System.out.println("Stack underflow");
                 return -1;
             } else {
-                return mainQ.remove();
+                while (mainQ.size() > 1) {
+                    helperQ.add(mainQ.remove());
+                }
+
+                int val = mainQ.remove();
+
+                while (helperQ.size() > 0) {
+                    mainQ.add(helperQ.remove());
+                }
+
+                return val;
             }
         }
 
@@ -48,7 +51,18 @@ public class Queue_to_Stack_Adapter_Pop_Efficient {
                 System.out.println("Stack underflow");
                 return -1;
             } else {
-                return mainQ.peek();
+                while (mainQ.size() > 1) {
+                    helperQ.add(mainQ.remove());
+                }
+
+                int val = mainQ.remove();
+                helperQ.add(val);
+
+                while (helperQ.size() > 0) {
+                    mainQ.add(helperQ.remove());
+                }
+
+                return val;
             }
         }
     }
@@ -80,24 +94,25 @@ public class Queue_to_Stack_Adapter_Pop_Efficient {
     }
 }
 /* 
-Queue To Stack Adapter - Pop Efficient
+Queue To Stack Adapter - Push Efficient
 1. You are required to complete the code of our QueueToStackAdapter class. 
 2. As data members you've two queues available - mainQ and helperQ. mainQ is to contain data and helperQ is to assist in operations. (This is cryptic - take hint from video)
 3. Here is the list of functions that you are supposed to complete
      3.1. push -> Should accept new data in LIFO manner.
      3.2. pop -> Should remove and return data in LIFO manner. If not available, print 
-     "Stack underflow" and return -1.
-    3.3. top -> Should return data in LIFO manner. If not available, print "Stack 
-    underflow" and return -1.
-    3.4. size -> Should return the number of elements available in the stack.
+      Stack underflow" and return -1.
+     3.3. top -> Should return data in LIFO manner. If not available, print "Stack 
+     underflow" and return -1.
+     3.4. size -> Should return the number of elements available in the stack.
 4. Input and Output is managed for you.
-Note -> pop, top and size should work in constant time. push should work in linear time.
+Note -> push and size should work in constant time. pop and top should work in linear time.
 Input Format
 Input is managed for you
 Output Format
 Output is managed for you
 Constraints
-Note -> pop, top and size should work in constant time. push should work in linear time.
+Note -> push and size should work in constant time. pop and top should work in linear time.
+
 Sample Input
 push 10
 push 20
