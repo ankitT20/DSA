@@ -396,8 +396,28 @@ public class Fold_Linked_List {
             tail.next = null;
         }
 
+        private void foldHelper(Node right, int floor) {
+            if (right == null) {
+                return;
+            }
+            foldHelper(right.next, floor + 1);
+
+            if (floor > size / 2) {
+                Node temp = fleft.next;
+                fleft.next = right;
+                right.next = temp;
+                fleft = temp;
+            } else if (floor == size / 2) {
+                tail = right;
+                tail.next = null;
+            }
+        }
+
+        Node fleft;
         public void fold() {
             // write your code here
+            fleft = head;
+            foldHelper(head, 0);
         }
     }
 
