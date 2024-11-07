@@ -12,7 +12,6 @@ public class Display_Generic_Tree {
     // d(10) -> 10 will print itself and its's family
     // d(20), d(30), d(40) will print themselves and theirs family
     // d(10) = s(10) + d(20) + d(30) + d(40)
-    // 
     public void display(Node node) {
         String str = node.data + "-->";
         for (Node child: node.children) {

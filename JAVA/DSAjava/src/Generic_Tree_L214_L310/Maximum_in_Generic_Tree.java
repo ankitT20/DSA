@@ -2,8 +2,8 @@ package Generic_Tree_L214_L310;
 import java.io.*;
 import java.util.*;
 
-public class Size_of_Generic_Tree {
-    // Size of a Generic Tree L 228
+public class Maximum_in_Generic_Tree {
+    // Maximum in a Generic Tree L 231
 
     private static class Node {
         int data;
@@ -48,16 +48,30 @@ public class Size_of_Generic_Tree {
     }
 
     public static int size(Node node) {
-        // write your code here
         int s = 0;
 
         for (Node child : node.children) {
-            int cs = size(child);
-            s = s + cs;
+            s += size(child);
         }
-        s = s + 1;
+        s += 1;
 
         return s;
+    }
+
+    public static int max(Node node) {
+        // write your code here
+        int max = Integer.MIN_VALUE;
+
+        for (Node child : node.children) {
+            int cm = max(child);
+            max = Math.max(cm, max);
+            // if (cm > max) {
+            //     max = cm;
+            // }
+        }
+        max = Math.max(node.data, max);
+
+        return max;
     }
 
     public static void main(String[] args) throws Exception {
@@ -70,16 +84,16 @@ public class Size_of_Generic_Tree {
         }
 
         Node root = construct(arr);
-        int sz = size(root);
-        System.out.println(sz);
+        int m = max(root);
+        System.out.println(m);
         // display(root);
     }
 
 }
 /* 
-Size Of Generic Tree
+Maximum In A Generic Tree
 1. You are given a partially written GenericTree class.
-2. You are required to complete the body of size function. The function is expected to count the number of nodes in the tree and return it.
+2. You are required to complete the body of max function. The function is expected to find the node with maximum value and return it.
 3. Input and Output is managed for you.
 Input Format
 Input is managed for you
@@ -92,5 +106,5 @@ Sample Input
 12
 10 20 -1 30 50 -1 60 -1 -1 40 -1 -1
 Sample Output
-6
+60
  */
