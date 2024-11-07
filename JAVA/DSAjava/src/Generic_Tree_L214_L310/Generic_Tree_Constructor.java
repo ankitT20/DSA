@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Generic_Tree_Constructor {
     // Generic Tree - Constructor   L 224
-    private class Node {
+    private static class Node {
         int data;
         ArrayList<Node> children = new ArrayList<>();
     }
@@ -17,7 +17,7 @@ public class Generic_Tree_Constructor {
 
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == -1) {
-                st.pop;
+                st.pop();
             } else {
                 Node t = new Node();
                 t.data = arr[i];
@@ -27,7 +27,7 @@ public class Generic_Tree_Constructor {
                 } else {
                     root = t;
                 }
-                
+
                 st.push(t);
             }
         }
