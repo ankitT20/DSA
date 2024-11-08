@@ -2,8 +2,8 @@ package Generic_Tree_L214_L310;
 import java.io.*;
 import java.util.*;
 
-public class Height_of_Generic_Tree {
-    // Height of a Generic Tree L 235
+public class Traversal_pre_post_Generic_Tree {
+    // Traversal in Generic Tree L 238
 
     private static class Node {
         int data;
@@ -71,16 +71,19 @@ public class Height_of_Generic_Tree {
     }
 
     public static int height(Node node) {
-        // write your code here
-        int ht = -1;
+        int h = -1;
 
         for (Node child : node.children) {
             int ch = height(child);
-            ht = Math.max(ch, ht);
+            h = Math.max(h, ch);
         }
-        ht += 1;
-        
-        return ht;
+        h += 1;
+
+        return h;
+    }
+
+    public static void traversals(Node node) {
+        // write your code here
     }
 
     public static void main(String[] args) throws Exception {
@@ -93,21 +96,26 @@ public class Height_of_Generic_Tree {
         }
 
         Node root = construct(arr);
-        int h = height(root);
-        System.out.println(h);
-        // display(root);
+        traversals(root);
     }
 
 }
 /* 
-Height Of A Generic Tree
+Generic Tree - Traversals (pre-order, Post-order)
 1. You are given a partially written GenericTree class.
-2. You are required to complete the body of height function. The function is expected to find the height of tree. Depth of a node is defined as the number of edges it is away from the root (depth of root is 0). Height of a tree is defined as depth of deepest node.
-3. Input and Output is managed for you.
+2. You are required to complete the body of traversals function. The function is expected to visit every node. While traversing the function must print following content in different situations.
+   2.1. When the control reaches the node for the first time -> "Node Pre" node.data.
+   2.2. Before the control leaves for a child node from a node -> "Edge Pre" 
+   node.data--child.data.
+   2.3. After the control comes back to a node from a child -> "Edge Post" node.data- 
+   -child.data.
+    2.4. When the control is about to leave node, after the children have been visited 
+    -> "Node Post" node.data.
+3. Input is managed for you.
 Input Format
 Input is managed for you
 Output Format
-Output is managed for you
+As suggested in Sample Output
 Constraints
 None
 
@@ -115,5 +123,26 @@ Sample Input
 12
 10 20 -1 30 50 -1 60 -1 -1 40 -1 -1
 Sample Output
-2
+Node Pre 10
+Edge Pre 10--20
+Node Pre 20
+Node Post 20
+Edge Post 10--20
+Edge Pre 10--30
+Node Pre 30
+Edge Pre 30--50
+Node Pre 50
+Node Post 50
+Edge Post 30--50
+Edge Pre 30--60
+Node Pre 60
+Node Post 60
+Edge Post 30--60
+Node Post 30
+Edge Post 10--30
+Edge Pre 10--40
+Node Pre 40
+Node Post 40
+Edge Post 10--40
+Node Post 10
  */
