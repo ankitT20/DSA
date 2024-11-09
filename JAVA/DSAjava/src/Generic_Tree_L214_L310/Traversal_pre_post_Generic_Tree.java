@@ -84,6 +84,7 @@ public class Traversal_pre_post_Generic_Tree {
 
     public static void traversals(Node node) {
         // write your code here
+        System.out.println("Node Pre " + node.data);
     }
 
     public static void main(String[] args) throws Exception {
