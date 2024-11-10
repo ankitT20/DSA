@@ -2,8 +2,8 @@ package Generic_Tree_L214_L310;
 import java.io.*;
 import java.util.*;
 
-public class Traversal_pre_post_Generic_Tree {
-    // Traversal in Generic Tree L 238
+public class Level_Order_Traversal_Generic_Tree {
+    // Level Order Traversal in a Generic Tree L 242
 
     private static class Node {
         int data;
@@ -83,26 +83,32 @@ public class Traversal_pre_post_Generic_Tree {
     }
 
     public static void traversals(Node node) {
-        // write your code here
-        // Pre-order = jab node ke LEFT se jate hai  
-        //          (euler path -> Node's Left size) before gooing deep in recursion(before call)
-        //          N > C (node is visited before children), root is first
-        // POST-order = jab euler path me node ke RIGHT se jate hai
-        //          while comming out of recursion (after call)
-        //          C > N, root is last 
-
-        // euler's left, on the way deep in recursion, node's pre area
         System.out.println("Node Pre " + node.data);
+
         for (Node child : node.children) {
-            // edge pre
             System.out.println("Edge Pre " + node.data + "--" + child.data);
             traversals(child);
-            // edge post
             System.out.println("Edge Post " + node.data + "--" + child.data);
         }
-        
+
         System.out.println("Node Post " + node.data);
-        // euler's right, on the way out of recursion, node's post area
+    }
+
+    public static void levelOrder(Node node) {
+        // write your code here
+        Queue<Node> q = new ArrayDeque<>();
+        q.add(node);
+        
+        while (q.size() > 0) {
+            node = q.remove();
+            System.out.print(node.data + " ");
+
+            for (Node child : node.children) {
+                q.add(child);
+            }
+        }
+        
+        System.out.print(".");
     }
 
     public static void main(String[] args) throws Exception {
@@ -115,53 +121,25 @@ public class Traversal_pre_post_Generic_Tree {
         }
 
         Node root = construct(arr);
-        traversals(root);
+        levelOrder(root);
     }
 
 }
 /* 
-Generic Tree - Traversals (pre-order, Post-order)
+Level-order Of Generic Tree
 1. You are given a partially written GenericTree class.
-2. You are required to complete the body of traversals function. The function is expected to visit every node. While traversing the function must print following content in different situations.
-   2.1. When the control reaches the node for the first time -> "Node Pre" node.data.
-   2.2. Before the control leaves for a child node from a node -> "Edge Pre" 
-   node.data--child.data.
-   2.3. After the control comes back to a node from a child -> "Edge Post" node.data- 
-   -child.data.
-    2.4. When the control is about to leave node, after the children have been visited 
-    -> "Node Post" node.data.
+2. You are required to complete the body of levelorder function. The function is expected to visit every node in "levelorder fashion". Please check the question video for more details.
 3. Input is managed for you.
 Input Format
 Input is managed for you
 Output Format
-As suggested in Sample Output
+All nodes from left to right (level by level) all separated by a space and ending in a "."
 Constraints
 None
 
 Sample Input
-12
-10 20 -1 30 50 -1 60 -1 -1 40 -1 -1
+24
+10 20 50 -1 60 -1 -1 30 70 -1 80 110 -1 120 -1 -1 90 -1 -1 40 100 -1 -1 -1
 Sample Output
-Node Pre 10
-Edge Pre 10--20
-Node Pre 20
-Node Post 20
-Edge Post 10--20
-Edge Pre 10--30
-Node Pre 30
-Edge Pre 30--50
-Node Pre 50
-Node Post 50
-Edge Post 30--50
-Edge Pre 30--60
-Node Pre 60
-Node Post 60
-Edge Post 30--60
-Node Post 30
-Edge Post 10--30
-Edge Pre 10--40
-Node Pre 40
-Node Post 40
-Edge Post 10--40
-Node Post 10
+10 20 30 40 50 60 70 80 90 100 110 120 .
  */
