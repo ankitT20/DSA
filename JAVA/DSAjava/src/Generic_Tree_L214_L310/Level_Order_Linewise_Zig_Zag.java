@@ -96,6 +96,28 @@ public class Level_Order_Linewise_Zig_Zag {
 
     public static void levelOrderLinewiseZZ(Node node) {
         // write your code here
+        Stack<Node> ms = new Stack<>();
+        ms.push(node);
+
+        Stack<Node> cs = new Stack<>();
+        int level;
+
+        while (ms.size() > 0) {
+            node = ms.pop();
+            System.out.print(node.data + " ");
+
+            if (level % 2 == 1) {
+                for (int i = 0; i < node.children.size(); i++) {
+                    Node child = node.children.get(i);
+                    cs.push(child);
+                }
+            } else {
+                for (int i = node.children.size() - 1; i >= 0; i--) {
+                    Node child = node.children.get(i);
+                    cs.push(child);
+                }
+            }
+        }
     }
 
     public static void main(String[] args) throws Exception {
