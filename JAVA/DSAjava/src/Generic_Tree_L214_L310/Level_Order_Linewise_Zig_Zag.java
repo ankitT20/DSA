@@ -100,7 +100,7 @@ public class Level_Order_Linewise_Zig_Zag {
         ms.push(node);
 
         Stack<Node> cs = new Stack<>();
-        int level;
+        int level = 1;
 
         while (ms.size() > 0) {
             node = ms.pop();
@@ -116,6 +116,13 @@ public class Level_Order_Linewise_Zig_Zag {
                     Node child = node.children.get(i);
                     cs.push(child);
                 }
+            }
+
+            if (ms.size() == 0) {
+                ms = cs;
+                cs = new Stack<>();
+                level++;
+                System.out.println();
             }
         }
     }
