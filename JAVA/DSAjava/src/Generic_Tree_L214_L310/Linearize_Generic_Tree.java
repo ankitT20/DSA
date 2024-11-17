@@ -155,6 +155,7 @@ public class Linearize_Generic_Tree {
         while (condition) {
             
         }
+        // high fever
 
         while (node.children.size() > 1) {
             Node lc = node.children.remove(node.children.size() - 1);  // last child
