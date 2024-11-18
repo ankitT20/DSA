@@ -151,11 +151,6 @@ public class Linearize_Generic_Tree {
         for (Node child : node.children) {
             linearize(child);
         }
-        // 
-        while (condition) {
-            
-        }
-        // high fever
 
         while (node.children.size() > 1) {
             Node lc = node.children.remove(node.children.size() - 1);  // last child
@@ -164,13 +159,29 @@ public class Linearize_Generic_Tree {
             slt.children.add(lc);
         }
     }
-
+    
     private static Node getTail(Node node){
         while (node.children.size() == 1) {
             node = node.children.get(0);
         }
-
+        
         return node;
+    }
+    
+    //   Linearize a Generic Tree | Efficient Approach
+    public static Node linearize2(Node node) {
+        if (node.children.size() == 0) {
+            return node;
+        }
+
+        Node lkt = linearize2(node.children.get(node.children.size() - 1));
+        while (node.children.size() > 1) {
+            Node last = node.children.remove(node.children.size() - 1);
+            Node sl = node.children.get(node.children.size() - 1);
+            Node slkt = linearize2(sl);
+            slkt.children.add(last);
+        }
+        return lkt;
     }
 
     public static void main(String[] args) throws Exception {
