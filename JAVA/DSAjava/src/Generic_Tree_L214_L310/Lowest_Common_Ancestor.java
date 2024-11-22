@@ -67,6 +67,9 @@ public class Lowest_Common_Ancestor {
 
     public static int lca(Node node, int d1, int d2) {
         // write your code here
+        for (int i = 0; i < array.length; i++) {
+            
+        }
     }
 
     public static void main(String[] args) throws Exception {
