@@ -2,8 +2,8 @@ package Generic_Tree_L214_L310;
 import java.io.*;
 import java.util.*;
 
-public class Lowest_Common_Ancestor {
-    // Lowest Common Ancestor L 272
+public class Distance_between_Nodes {
+    // Distance between Nodes in Generic Tree L 275
 
     private static class Node {
         int data;
@@ -66,21 +66,22 @@ public class Lowest_Common_Ancestor {
     }
 
     public static int lca(Node node, int d1, int d2) {
-        // write your code here
         ArrayList<Integer> p1 = nodeToRootPath(node, d1);
         ArrayList<Integer> p2 = nodeToRootPath(node, d2);
 
         int i = p1.size() - 1;
         int j = p2.size() - 1;
+
         while (i >= 0 && j >= 0 && p1.get(i) == p2.get(j)) {
             i--;
             j--;
         }
 
-        i++;
-        j++;
+        return p1.get(i + 1);
+    }
 
-        return p1.get(i);
+    public static int distanceBetweenNodes(Node node, int d1, int d2) {
+        // write your code here
     }
 
     public static void main(String[] args) throws Exception {
@@ -96,18 +97,18 @@ public class Lowest_Common_Ancestor {
         int d2 = Integer.parseInt(br.readLine());
 
         Node root = construct(arr);
-        int lca = lca(root, d1, d2);
-        System.out.println(lca);
+        int dist = distanceBetweenNodes(root, d1, d2);
+        System.out.println(dist);
         // display(root);
     }
 
 }
 /* 
-Lowest Common Ancestor (generic Tree)
+Distance Between Two Nodes In A Generic Tree
 1. You are given a partially written GenericTree class.
-2. You are required to complete the body of lca function. The function is expected to return the lowest common ancestor of two data values that are passed to it. 
+2. You are required to complete the body of distanceBetweenNodes function. The function is expected to return the distance (in terms of number of edges) between two nodes in a generic tree.
 Please watch the question video to understand what lca is.
-3. Input and Output is managed for you.
+3. Input and Output is managed for you.                                
 Input Format
 Input is managed for you
 Output Format
@@ -118,8 +119,8 @@ None
 Sample Input
 24
 10 20 50 -1 60 -1 -1 30 70 -1 80 110 -1 120 -1 -1 90 -1 -1 40 100 -1 -1 -1
-120
-80
+100
+110
 Sample Output
-80
+5
  */
