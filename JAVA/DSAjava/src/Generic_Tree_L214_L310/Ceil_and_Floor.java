@@ -3,8 +3,8 @@ package Generic_Tree_L214_L310;
 import java.io.*;
 import java.util.*;
 
-public class Predecessor_Successor_of_element {
-    // Predecessor and Successor of an element L 291
+public class Ceil_and_Floor {
+    // Ceil And Floor In Generic Tree L 295
 
     private static class Node {
         int data;
@@ -48,25 +48,28 @@ public class Predecessor_Successor_of_element {
         return root;
     }
 
-    static Node predecessor;
-    static Node successor;
-    static int state;
+    static int ceil;
+    static int floor;
 
-    public static void predecessorAndSuccessor(Node node, int data) {
-        // write your code here
-        // pre-order
-        if (state == 0) {
-            if (node.data == data) {
-                state = 1;
-            } else {
-                predecessor = node;
+    public static void ceilAndFloor(Node node, int data) {
+        // Write your code here
+        // ceil = smallest among larger , just larger
+        // floor = largest among smaller , just smaller
+        // travel and change strategy
+        if (node.data > data) {
+            if (node.data < ceil) {
+                ceil = node.data;
             }
-        } else if (state == 1) {
-            successor = node;
-            state = 2;
         }
+
+        if (node.data < data) {
+            if (node.data > floor) {
+                floor = node.data;
+            }
+        }
+        
         for (Node child : node.children) {
-            predecessorAndSuccessor(child, data);
+            ceilAndFloor(child, data);
         }
     }
 
@@ -82,28 +85,18 @@ public class Predecessor_Successor_of_element {
         int data = Integer.parseInt(br.readLine());
 
         Node root = construct(arr);
-        predecessor = null;
-        successor = null;
-        state = 0;
-        predecessorAndSuccessor(root, data);
-        if (predecessor == null) {
-            System.out.println("Predecessor = Not found");
-        } else {
-            System.out.println("Predecessor = " + predecessor.data);
-        }
-
-        if (successor == null) {
-            System.out.println("Successor = Not found");
-        } else {
-            System.out.println("Successor = " + successor.data);
-        }
+        ceil = Integer.MAX_VALUE;  // smallest among larger
+        floor = Integer.MIN_VALUE;  // largest among smaller
+        ceilAndFloor(root, data);
+        System.out.println("CEIL = " + ceil);
+        System.out.println("FLOOR = " + floor);
     }
 
 }
 /* 
-Predecessor And Successor Of An Element
+Ceil And Floor In Generic Tree
 1. You are given a partially written GenericTree class.
-2. You are required to find the preorder predecessor and successor of a given element. Use the "travel and change" strategy explained in the earlier video. The static properties have been declared for you. You can declare more if you want.
+2. You are required to find the ceil and floor value of a given element. Use the "travel and change" strategy explained in the earlier video. The static properties - ceil and floor have been declared for you. You can declare more if you want. If the element is largest ceil will be largest integer value (32 bits), if element is smallest floor will be smallest integer value (32 bits). Watch the question video for clarity.
 3. Input and Output is managed for you.
 Input Format
 Input is managed for you
@@ -115,8 +108,8 @@ None
 Sample Input
 24
 10 20 -50 -1 60 -1 -1 30 70 -1 -80 110 -1 -120 -1 -1 90 -1 -1 40 -100 -1 -1 -1
--120
+70
 Sample Output
-Predecessor = 110
-Successor = 90
+CEIL = 90
+FLOOR = 60
  */
