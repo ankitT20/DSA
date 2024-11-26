@@ -3,8 +3,8 @@ package Generic_Tree_L214_L310;
 import java.io.*;
 import java.util.*;
 
-public class Node_with_Maximum_Subtree_Sum {
-    // Node with Maximum Subtree Sum L 300
+public class Diameter_of_Generic_Tree {
+    // Diameter of Generic Tree L 305
 
     private static class Node {
         int data;
@@ -48,27 +48,6 @@ public class Node_with_Maximum_Subtree_Sum {
         return root;
     }
 
-    static int msn = 0;
-    static int ms = Integer.MIN_VALUE;
-    static int retSumAndCalculateMSST(Node node) {
-        int sum = 0;
-
-        for (Node  child : node.children) {
-            int csum = retSumAndCalculateMSST(child);
-            sum += csum;
-        }
-
-        sum += node.data;
-
-        if (sum > ms) {
-            msn = node.data;
-            ms = sum;
-        }
-
-        return sum;
-        // travel and change style, return something else, calculate something else
-    }
-
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -80,20 +59,18 @@ public class Node_with_Maximum_Subtree_Sum {
 
         Node root = construct(arr);
         // write your code here
-        retSumAndCalculateMSST(root);
-        System.out.println(msn + "@" + ms);
     }
 
 }
 /* 
-Node With Maximum Subtree Sum
+Diameter Of Generic Tree
 1. You are given a partially written GenericTree class.
-2. You are required to find and print the node which has the subtree with largest sum. Also print the sum of the concerned subtree separated from node's value by an '@'. Refer the question video for clarity.
+2. You are required to find and print the diameter of tree. THe diameter is defined as maximum number of edges between any two nodes in the tree. Check the question video for clarity.
 3. Input is managed for you.
 Input Format
 Input is managed for you
 Output Format
-@
+diameter
 Constraints
 None
 
@@ -101,5 +78,5 @@ Sample Input
 20
 10 20 -50 -1 60 -1 -1 30 -70 -1 80 -1 90 -1 -1 40 -100 -1 -1 -1
 Sample Output
-30@130
+4
  */
