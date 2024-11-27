@@ -48,6 +48,31 @@ public class Diameter_of_Generic_Tree {
         return root;
     }
 
+    static int dia = 0;
+    static int calculateDiaReturnHeight(Node node) {
+        int dch = -1;
+        int sdch = -1;
+
+        for (Node child : node.children) {
+            int ch = calculateDiaReturnHeight(child);
+            if (ch > dch) {
+                sdch = dch;
+                dch = ch;
+            } else if (ch > sdch) {
+                sdch = ch;
+            }
+        }
+
+        int cand = dch + sdch + 2;
+        if (cand > dia) {
+            dia = cand;
+        }
+
+        dch += 1;
+        return dch;
+    }
+    
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -59,6 +84,9 @@ public class Diameter_of_Generic_Tree {
 
         Node root = construct(arr);
         // write your code here
+        // diameter is defined as maximum number of edges between any two nodes in tree
+        calculateDiaReturnHeight(root);
+        System.out.println(dia);
     }
 
 }
