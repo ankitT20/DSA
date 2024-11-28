@@ -84,6 +84,7 @@ public class Diameter_of_Generic_Tree {
 
         Node root = construct(arr);
         // write your code here
+        // syso
         // diameter is defined as maximum number of edges between any two nodes in tree
         calculateDiaReturnHeight(root);
         System.out.println(dia);
