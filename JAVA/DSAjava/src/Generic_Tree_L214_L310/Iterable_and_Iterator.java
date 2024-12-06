@@ -52,6 +52,8 @@ public class Iterable_and_Iterator {
                 } else if (top.state >= 0 && top.state < top.node.children.size()) {
                     Pair cp = new Pair(top.node.children.get(top.state), -1);
                     st.push(cp);
+
+                    top.state++;
                 } else {
                     st.pop();
                 }
