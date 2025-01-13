@@ -38,7 +38,7 @@ See [JAVA/DSAjava/src](https://github.com/ankitT20/DSA/tree/main/JAVA/DSAjava/sr
    - [x] Linked Lists
    - [x] Generic Tree
    - [x] Binary Tree
-   - [ ] Binary Search Tree
+   - [x] Binary Search Tree
 
 6. Advanced Data Structure 
    - [ ] Hashmap And Heap
