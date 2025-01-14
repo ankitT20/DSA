@@ -16,6 +16,16 @@ public class BT_Constructor {
             this.right = right;
         }
     }
+
+    public static class Pair {
+        Node node;
+        int state;
+
+        Pair(Node node, int state) {
+            this.node = node;
+            this.state = state;
+        }
+    }
     public static void main(String[] args) {
         
     }
