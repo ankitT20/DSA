@@ -5,6 +5,7 @@ import java.util.*;
 public class pattern_10 {
     // Pattern-10   L 54  hollow diamond
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 

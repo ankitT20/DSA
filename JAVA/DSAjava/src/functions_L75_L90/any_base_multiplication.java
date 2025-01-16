@@ -5,6 +5,7 @@ import java.util.*;
 public class any_base_multiplication {
     // Any base multiplication   L90
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int b = scn.nextInt();
         int n1 = scn.nextInt();

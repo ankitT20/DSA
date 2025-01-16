@@ -1,6 +1,7 @@
 package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Merge_two_sorted_Linked_List {
     // Merge two sorted Linked List L 180

@@ -5,6 +5,7 @@ import java.util.*;
 public class rotate_number {
     // 25398 , 2 = 98253 , -2 = 39825
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int k = scn.nextInt();

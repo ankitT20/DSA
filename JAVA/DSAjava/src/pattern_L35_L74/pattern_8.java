@@ -1,10 +1,12 @@
 package pattern_L35_L74;
-
+import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class pattern_8 {
     // Pattern-8   L 50  diagonal /
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 

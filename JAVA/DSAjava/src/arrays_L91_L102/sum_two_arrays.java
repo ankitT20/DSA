@@ -1,10 +1,12 @@
 package arrays_L91_L102;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class sum_two_arrays {
     // Sum of two arrays   L100
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn  = new Scanner(System.in);
 
         int n1 = scn.nextInt();

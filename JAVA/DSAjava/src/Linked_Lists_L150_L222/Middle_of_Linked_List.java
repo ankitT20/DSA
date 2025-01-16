@@ -1,6 +1,7 @@
 package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Middle_of_Linked_List {
     // Middle of Linked List L 178

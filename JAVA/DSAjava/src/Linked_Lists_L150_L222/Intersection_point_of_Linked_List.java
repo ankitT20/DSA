@@ -1,6 +1,7 @@
 package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Intersection_point_of_Linked_List {
     // Intersection point of Linked List L 221

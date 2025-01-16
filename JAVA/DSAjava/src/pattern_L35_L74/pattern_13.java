@@ -5,6 +5,7 @@ import java.util.*;
 public class pattern_13 {
     // Pattern-13   L 60  triangle + combination
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 

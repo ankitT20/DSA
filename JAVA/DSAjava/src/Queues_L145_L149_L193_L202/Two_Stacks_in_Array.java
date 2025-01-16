@@ -1,6 +1,7 @@
 package Queues_L145_L149_L193_L202;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Two_Stacks_in_Array {
     // Two Stacks in an Array L 202

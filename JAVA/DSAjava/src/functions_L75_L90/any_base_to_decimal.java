@@ -6,6 +6,7 @@ public class any_base_to_decimal {
     // Any base to decimal   L 82
     public static void main(String[] args) {
         // [1172](base8) = [634](base10)
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int b = scn.nextInt();

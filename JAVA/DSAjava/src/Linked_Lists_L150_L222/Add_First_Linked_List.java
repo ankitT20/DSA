@@ -1,6 +1,7 @@
 package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Add_First_Linked_List {
     // Add First in Linked List L 160

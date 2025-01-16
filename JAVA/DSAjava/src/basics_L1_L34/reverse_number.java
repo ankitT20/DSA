@@ -5,6 +5,7 @@ import java.util.*;
 public class reverse_number {
     // reverse a number L-20
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 

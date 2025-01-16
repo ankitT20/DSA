@@ -5,6 +5,7 @@ import java.util.*;
 public class pattern_14 {
     // Pattern-14   L 62  Table
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int x = scn.nextInt();
         

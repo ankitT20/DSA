@@ -75,6 +75,7 @@ public class first {
         }
         System.out.println("Done.");
  */
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         // int n = scn.nextInt();
         int n = Integer.parseInt(scn.nextLine());

@@ -6,6 +6,7 @@ public class pattern_5 {
     // Pattern-5   L 44  diamond
     // input will be odd
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 

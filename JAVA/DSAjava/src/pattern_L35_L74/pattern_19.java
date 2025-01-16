@@ -5,6 +5,7 @@ import java.util.*;
 public class pattern_19 {
     // Pattern-19   L 72
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 

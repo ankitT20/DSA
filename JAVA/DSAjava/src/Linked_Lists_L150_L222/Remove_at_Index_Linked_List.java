@@ -1,6 +1,7 @@
 package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Remove_at_Index_Linked_List {
     // Remove at Index in Linked List L 166

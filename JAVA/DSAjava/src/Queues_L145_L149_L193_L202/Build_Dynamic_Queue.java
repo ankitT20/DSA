@@ -1,6 +1,7 @@
 package Queues_L145_L149_L193_L202;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Build_Dynamic_Queue {
     // Build Dynamic Queue L 149

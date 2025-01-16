@@ -1,6 +1,7 @@
 package arrays_L91_L102;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class intro_arrays {
     // Introduction to Arrays   L91

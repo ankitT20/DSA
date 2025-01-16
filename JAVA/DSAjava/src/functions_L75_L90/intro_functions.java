@@ -22,6 +22,7 @@ public class intro_functions {
     }
 
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         // calculate nPr
         int n = scn.nextInt();

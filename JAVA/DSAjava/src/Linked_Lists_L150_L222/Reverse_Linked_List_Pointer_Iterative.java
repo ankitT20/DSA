@@ -1,6 +1,7 @@
 package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Reverse_Linked_List_Pointer_Iterative {
     // Reverse a Linked List - Pointer Iterative L 170

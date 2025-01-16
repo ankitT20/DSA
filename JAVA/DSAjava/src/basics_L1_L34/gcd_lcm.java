@@ -5,6 +5,7 @@ import java.util.*;
 public class gcd_lcm {
     // GCD(hcf) and LCM L28
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n1 = scn.nextInt();
         int n2 = scn.nextInt();

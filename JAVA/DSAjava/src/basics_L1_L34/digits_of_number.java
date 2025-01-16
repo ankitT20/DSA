@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class digits_of_number {
     // print digits of number
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         

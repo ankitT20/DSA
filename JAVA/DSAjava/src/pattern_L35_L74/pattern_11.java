@@ -5,6 +5,7 @@ import java.util.*;
 public class pattern_11 {
     // Pattern-11   L 56 triangle + increasing numbers
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 

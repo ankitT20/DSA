@@ -1,10 +1,12 @@
 package arrays_L91_L102;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class difference_two_arrays {
     // Difference of two arrays   L 102
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn  = new Scanner(System.in);
 
         int n1 = scn.nextInt();

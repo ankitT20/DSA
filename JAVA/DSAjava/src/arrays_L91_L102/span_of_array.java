@@ -1,10 +1,12 @@
 package arrays_L91_L102;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class span_of_array {
     // Span of an Array   L94
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 

@@ -1,6 +1,7 @@
 package Linked_Lists_L150_L222;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Remove_duplicates_in_sorted_Linked_List {
     // Remove duplicates in a sorted Linked List L 184

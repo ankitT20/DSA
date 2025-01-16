@@ -1,10 +1,12 @@
 package pattern_L35_L74;
-
+import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class pattern_9 {
     // Pattern-9   L 52
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         

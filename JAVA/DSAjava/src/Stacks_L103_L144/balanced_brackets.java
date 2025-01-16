@@ -1,11 +1,12 @@
 package Stacks_L103_L144;
 import java.io.*;
 import java.util.*;
-
+@SuppressWarnings("unused")
 
 public class balanced_brackets {
     // Balanced Brackets   L107
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         String str = scn.nextLine();
 

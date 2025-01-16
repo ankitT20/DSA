@@ -5,6 +5,7 @@ import java.util.*;
 public class count_digits_in_number {
     // 987667 = 6
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         

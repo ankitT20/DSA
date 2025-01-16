@@ -1,6 +1,7 @@
 package Stacks_L103_L144;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Build_Normal_Stack {
     // Build Normal Stack L 138

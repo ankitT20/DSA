@@ -5,6 +5,7 @@ import java.util.*;
 public class digits_frequency {
     // Digits Frequency   L 77
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int d = scn.nextInt();

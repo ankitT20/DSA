@@ -1,6 +1,7 @@
 package Generic_Tree_L214_L310;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class Generic_Tree_Constructor {
     // Generic Tree - Constructor   L 224

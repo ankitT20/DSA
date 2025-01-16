@@ -5,6 +5,7 @@ import java.util.*;
 public class pattern_15 {
     // Pattern-15   L 64  diamond + num
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         

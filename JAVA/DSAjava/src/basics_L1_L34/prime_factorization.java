@@ -5,6 +5,7 @@ import java.util.*;
 public class prime_factorization {
     // Prime Factorization L 29
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 

@@ -8,6 +8,7 @@ public class pythagorean_triplets {
         // 3 inputs a,b,c -> can a right angle triangle be formed ?
         // perpendicular, base, hypotenuse -> P square + B square = H square
         // we dont know which is the hypotenuse (greatest side, sabse bade wala)
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int a = scn.nextInt();
         int b = scn.nextInt();

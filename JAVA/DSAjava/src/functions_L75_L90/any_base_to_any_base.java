@@ -5,6 +5,7 @@ import java.util.*;
 public class any_base_to_any_base {
     // Any base to any base   L 84
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int b1 = scn.nextInt();

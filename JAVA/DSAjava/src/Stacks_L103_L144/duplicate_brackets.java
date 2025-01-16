@@ -1,10 +1,12 @@
 package Stacks_L103_L144;
 import java.io.*;
 import java.util.*;
+@SuppressWarnings("unused")
 
 public class duplicate_brackets {
     // Duplicate Brackets   L104
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         String str = scn.nextLine();
 

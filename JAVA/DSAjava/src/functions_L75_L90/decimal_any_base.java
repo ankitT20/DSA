@@ -8,6 +8,7 @@ public class decimal_any_base {
         // [634](base10) = [1172](base8)
         // divide by 8 (jisme jana hota hai), till zero, mul first remainder by 10^0, second by 10^1, 10^2 ... 
         // 6*10^2 + 3*10^1 + 4*10^0 = 1*8^3 + 1*8^2 + 7*8^1 + 2*8^0
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int b = scn.nextInt();

@@ -5,6 +5,7 @@ import java.util.*;
 public class pattern_12 {
     // Pattern-12   L 58  trialgle pattern + fibonacci
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 
