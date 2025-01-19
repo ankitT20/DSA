@@ -3,8 +3,8 @@ import java.io.*;
 import java.util.*;
 // @SuppressWarnings("unused")
 
-public class Level_Order_Traversal_BT {
-    // Level Order Traversal in a Binary Tree   L 320
+public class Iterative_Pre_Post_In_order_BT {
+    // Iterative Pre, Post and In-order traversal in Binary Tree   L 322
     public static class Node {
         int data;
         Node left;
@@ -80,27 +80,42 @@ public class Level_Order_Traversal_BT {
         display(node.right);
     }
 
-    public static void levelOrder(Node node) {
-        Queue<Node> mq = new ArrayDeque<>();
-        mq.add(node);
+    public static void iterativePrePostInTraversal(Node node) {
+        Stack<Pair> st = new Stack<>();
+        Pair rtp = new Pair(node, 1);
+        st.push(rtp);
 
-        while (mq.size() > 0) {
-            int count = mq.size();
-            for (int i = 0; i < count; i++) {
-                node = mq.remove();
-                System.out.print(node.data + " ");
+        String pre = "";
+        String in = "";
+        String post = "";
 
-                if (node.left != null) {
-                    mq.add(node.left);
+        while (st.size() > 0) {
+            Pair top = st.peek();
+            if (top.state == 1) {  // pre, s++, left
+                pre += top.node.data + " ";
+                top.state++;
+
+                if (top.node.left != null) {
+                    Pair lp = new Pair(top.node.left, 1);
+                    st.push(lp);
                 }
-
-                if (node.right != null) {
-                    mq.add(node.right);
+            } else if (top.state == 2) {  // in, s++, right
+                in += top.node.data + " ";
+                top.state++;
+                
+                if (top.node.right != null) {
+                    Pair rp = new Pair(top.node.right, 1);
+                    st.push(rp);
                 }
+            } else {  // post, pop
+                post += top.node.data + " ";
+                st.pop();
             }
-
-            System.out.println();
         }
+
+        System.out.println(pre);
+        System.out.println(in);
+        System.out.println(post);
     }
 
     public static void main(String[] args) throws Exception {
@@ -117,8 +132,7 @@ public class Level_Order_Traversal_BT {
         }
 
         Node root = construct(arr);
-        levelOrder(root);
-        
+        iterativePrePostInTraversal(root);
     }
 }
 /* 
@@ -126,8 +140,7 @@ Input:
 19
 50 25 12 n n 37 30 n n n 75 62 n 70 n n 87 n n
 Output:
-50 
-25 75 
-12 37 62 87 
-30 70 
+50 25 12 37 30 75 62 70 87 
+12 25 30 37 50 62 70 75 87 
+12 30 37 25 70 62 87 75 50 
  */
