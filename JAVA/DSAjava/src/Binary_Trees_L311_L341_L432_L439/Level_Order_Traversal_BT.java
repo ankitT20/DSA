@@ -1,8 +1,7 @@
 package Binary_Trees_L311_L341_L432_L439;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Stack;
+import java.io.*;
+import java.util.*;
+// @SuppressWarnings("unused")
 
 public class Level_Order_Traversal_BT {
     // Level Order Traversal in a Binary Tree   L 319
@@ -81,6 +80,25 @@ public class Level_Order_Traversal_BT {
         display(node.right);
     }
 
+    public static levelOrder(Node node) {
+        Queue<Node> q = new ArrayDeque<>();
+        q.add(node);
+        while (q.size() > 0) {
+            int count = q.size();
+            for (int i = 0; i < count; i++) {
+                node = q.remove();
+                System.out.print(node.data + " ");
+                if (node.left != null) {
+                    q.add(node.left);
+                }
+                if (node.right != null) {
+                    q.add(node.right);
+                }
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -98,3 +116,13 @@ public class Level_Order_Traversal_BT {
         
     }
 }
+/* 
+Input:
+19
+50 25 12 n n 37 30 n n n 75 62 n 70 n n 87 n n
+Output:
+50
+25 75
+12 37 62 87
+30 70
+ */
