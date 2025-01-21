@@ -80,6 +80,17 @@ public class Print_K_Levels_Down {
         display(node.right);
     }
 
+    public static void printKLevelsDown(Node node, int k) {
+        if (node == null || k < 0) {
+            return;
+        }
+        if (k == 0) {
+            System.out.println(node.data);
+        }
+        printKLevelsDown(node.left, k - 1);
+        printKLevelsDown(node.right, k - 1);
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
