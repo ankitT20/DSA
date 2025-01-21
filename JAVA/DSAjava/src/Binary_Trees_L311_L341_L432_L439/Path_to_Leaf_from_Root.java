@@ -3,9 +3,8 @@ import java.io.*;
 import java.util.*;
 // @SuppressWarnings("unused")
 
-public class Print_Nodes_K_Level_Far {
-    // Print Nodes K Level Far   L 329
-    // Print Nodes K Distance Away
+public class Path_to_Leaf_from_Root {
+    // Path to Leaf from Root   L 331
     public static class Node {
         int data;
         Node left;
@@ -81,49 +80,21 @@ public class Print_Nodes_K_Level_Far {
         display(node.right);
     }
 
-    public static void printKNodesFar(Node node, int data, int k) {
-        path = new ArrayList<>();
-        find(node, data);
-        for (int i = 0; i < path.size() && i <= k; i++) {
-            printKLevelsDown(path.get(i), k - i, i == 0? null: path.get(i - 1));
-        }
-    }
-
-    static ArrayList<Node> path;
-    public static boolean find(Node node, int data) {
+    public static void pathToLeafFromRoot(Node node, String path, int sum, int lo, int hi) {
         if (node == null) {
-            return false;
-        }
-
-        if (node.data == data) {
-            path.add(node);
-            return true;
-        }
-
-        boolean filc = find(node.left, data);
-        if (filc) {
-            path.add(node);
-            return true;
-        }
-
-        boolean firc = find(node.right, data);
-        if (firc) {
-            path.add(node);
-            return true;
-        }
-
-        return false;
-    }
-
-    public static void printKLevelsDown(Node node, int k, Node blocker) {
-        if (node == null || k < 0 || node == blocker) {
             return;
         }
-        if (k == 0) {
-            System.out.println(node.data);
+
+        if (node.left == null && node.right == null) {
+            sum += node.data;
+            if (sum >= lo && sum <= hi) {
+                System.out.println(path + node.data);
+            }
+            return;
         }
-        printKLevelsDown(node.left, k - 1, blocker);
-        printKLevelsDown(node.right, k - 1, blocker);
+
+        pathToLeafFromRoot(node.left, path + node.data + " ", sum + node.data, lo, hi);
+        pathToLeafFromRoot(node.right, path + node.data + " ", sum + node.data, lo, hi);
     }
 
     public static void main(String[] args) throws Exception {
@@ -139,20 +110,21 @@ public class Print_Nodes_K_Level_Far {
             }
         }
 
-        int data = Integer.parseInt(br.readLine());
-        int k = Integer.parseInt(br.readLine());
+        int lo = Integer.parseInt(br.readLine());
+        int hi = Integer.parseInt(br.readLine());
 
         Node root = construct(arr);
-        printKNodesFar(root, data, k);
+        pathToLeafFromRoot(root, "", 0, lo, hi);
     }
 }
 /* 
 Input:
-19
-50 25 12 n n 37 30 n n n 75 62 n 70 n n 87 n n
-37
-2
+23
+50 25 12 n n 37 30 n n 40 n n 75 62 60 n n 70 n n 87 n n
+150
+250
 Output:
-12
-50
+50 25 37 40
+50 75 62 60
+50 75 87
  */
