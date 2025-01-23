@@ -3,8 +3,9 @@ import java.io.*;
 import java.util.*;
 // @SuppressWarnings("unused")
 
-public class Transform_to_Left_Cloned_Tree {
-    // Transform to Left Cloned Tree   L 333
+public class Transform_Back_from_Left_Cloned_Tree {
+    // Transform Back from a Left Cloned Tree   L 335
+    // Transform To Normal From Left-cloned Tree
     public static class Node {
         int data;
         Node left;
@@ -80,17 +81,16 @@ public class Transform_to_Left_Cloned_Tree {
         display(node.right);
     }
 
-    public static Node createLeftCloneTree(Node node) {
+    public static Node transBackFromLeftClonedTree(Node node) {
         if (node == null) {
             return null;
         }
 
-        Node lcr = createLeftCloneTree(node.left);
-        Node rcr = createLeftCloneTree(node.right);
+        Node lnn = transBackFromLeftClonedTree(node.left.left);
+        Node rnn = transBackFromLeftClonedTree(node.right);
 
-        Node nn = new Node(node.data, lcr, null);
-        node.left = nn;
-        node.right = rcr;
+        node.left = lnn;
+        node.right = rnn;
 
         return node;
     }
@@ -109,31 +109,22 @@ public class Transform_to_Left_Cloned_Tree {
         }
 
         Node root = construct(arr);
-        root = createLeftCloneTree(root);
+        root = transBackFromLeftClonedTree(root);
         display(root);
     }
 }
 /* 
 Input:
-19
-50 25 12 n n 37 30 n n n 75 62 n 70 n n 87 n n
+37
+50 50 25 25 12 12 n n n n 37 37 30 30 n n n n n n 75 75 62 62 n n 70 70 n n n n 87 87 n n n
 Output:
-50 <- 50 -> 75
-25 <- 50 -> .
-25 <- 25 -> 37
-12 <- 25 -> .
-12 <- 12 -> .
+25 <- 50 -> 75
+12 <- 25 -> 37
 . <- 12 -> .
-37 <- 37 -> .
 30 <- 37 -> .
-30 <- 30 -> .
 . <- 30 -> .
-75 <- 75 -> 87
-62 <- 75 -> .
-62 <- 62 -> 70
-. <- 62 -> .
-70 <- 70 -> .
+62 <- 75 -> 87
+. <- 62 -> 70
 . <- 70 -> .
-87 <- 87 -> .
 . <- 87 -> .
  */
