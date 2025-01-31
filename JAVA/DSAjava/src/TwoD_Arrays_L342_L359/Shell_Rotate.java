@@ -31,6 +31,104 @@ public class Shell_Rotate {
         fillShellFromOned(arr, s, oned);
     }
 
+    public static int[] fillOnedFromShell(int[][] arr, int s){
+        int minr = s - 1;
+        int minc = s - 1;
+        int maxr = arr.length - s;
+        int maxc = arr[0].length - s;
+        int sz = 2 * (maxr - minr + maxc - minc);
+        int[] oned = new int[sz];
+        int idx = 0;
+
+        // left wall
+        for(int i = minr; i <= maxr; i++){
+            oned[idx] = arr[i][minc];
+            idx++;
+        }
+        minc++;
+
+        // bottom wall
+        for(int i = minc; i <= maxc; i++){
+            oned[idx] = arr[maxr][i];
+            idx++;
+        }
+        maxr--;
+
+        // right wall
+        for(int i = maxr; i >= minr; i--){
+            oned[idx] = arr[i][maxc];
+            idx++;
+        }
+        maxc--;
+
+        // top wall
+        for(int i = maxc; i >= minc; i--){
+            oned[idx] = arr[minr][i];
+            idx++;
+        }
+        minr++;
+
+        return oned;
+    }
+
+    public static void fillShellFromOned(int[][] arr, int s, int[] oned){
+        int minr = s - 1;
+        int minc = s - 1;
+        int maxr = arr.length - s;
+        int maxc = arr[0].length - s;
+        int idx = 0;
+
+        // left wall
+        for(int i = minr; i <= maxr; i++){
+            arr[i][minc] = oned[idx];
+            idx++;
+        }
+        minc++;
+
+        // bottom wall
+        for(int i = minc; i <= maxc; i++){
+            arr[maxr][i] = oned[idx];
+            idx++;
+        }
+        maxr--;
+
+        // right wall
+        for(int i = maxr; i >= minr; i--){
+            arr[i][maxc] = oned[idx];
+            idx++;
+        }
+        maxc--;
+
+        // top wall
+        for(int i = maxc; i >= minc; i--){
+            arr[minr][i] = oned[idx];
+            idx++;
+        }
+        minr++;
+    }
+
+    public static void rotate(int[] oned, int r){
+        r = r % oned.length;
+        if(r < 0){
+            r += oned.length;
+        }
+
+        reverse(oned, 0, oned.length - r - 1);
+        reverse(oned, oned.length - r, oned.length - 1);
+        reverse(oned, 0, oned.length - 1);
+    }
+
+    public static void reverse(int[] oned, int left, int right){
+        while(left < right){
+            int temp = oned[left];
+            oned[left] = oned[right];
+            oned[right] = temp;
+
+            left++;
+            right--;
+        }
+    }
+
     public static void display(int[][] arr){
         for(int i = 0; i < arr.length; i++){
             for(int j = 0; j < arr[0].length; j++){
