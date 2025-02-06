@@ -4,7 +4,7 @@ import java.util.*;
 @SuppressWarnings("unused")
 
 public class Rotate_an_Array {
-    // Rotate an Array   L 263
+    // Rotate an Array   L 363
     public static void display(int[] a) {
         StringBuilder sb = new StringBuilder();
         for (int val : a) {
@@ -51,3 +51,23 @@ public class Rotate_an_Array {
         display(a);
     }
 }
+/* 
+Rotate An Array
+Question
+I. You are given a number n, representing the size of array a.
+YOU n representing elements array a.
+3. You are given number k.
+4. Rotate the array a, k times to the right (for positive values of k), anci to
+the ieft for negative values ot k.
+
+Input:
+5
+1
+2
+3
+4
+5
+1
+Output:
+5 1 2 3 4 
+ */
