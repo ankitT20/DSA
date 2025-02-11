@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Binary_Search_Algorithm {
     // Binary Search Algorithm   L 370
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         int[] arr = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
         int data = 70;
 
