@@ -6,7 +6,10 @@ import java.util.*;
 public class Factorial {
     // Factorial   L 380
     public static void main(String[] args) throws Exception {
-        
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        System.out.println(factorial(n));
+        scn.close();
     }
 
     public static int factorial(int n){
