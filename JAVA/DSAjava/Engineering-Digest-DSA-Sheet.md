@@ -29,7 +29,7 @@
 - **#76 – [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)** 
 - **#57 – [Insert Interval](https://leetcode.com/problems/insert-interval/)** 
 - **#42 – [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)** 
-- **#224 – [Basic Calculator](https://leetcode.com/problems/basic-calculator/) ![ref1]**
+- **#224 – [Basic Calculator](https://leetcode.com/problems/basic-calculator/)**
 
 
 # 2. **Binary Search & Sorting**  
@@ -42,7 +42,7 @@
 - **#162 – [Find Peak Element](https://leetcode.com/problems/find-peak-element/)** 
 
 ### ### **Hard**  
-- **#4 – [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) ![ref1]**
+- **#4 – [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)**
 
 
 # 3. **Two Pointers & Sliding Window**  
@@ -63,7 +63,7 @@
 
 # ### **Hard**   
 - **#239 – [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)** 
-- **#992 – [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) ![ref1]**
+- **#992 – [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/)**
 
 
 # 4. **Stacks & Queues**  
@@ -73,7 +73,7 @@
 - **#232 – [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)** 
 
 ### **Medium**  
-- **#150 – [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) ![ref1]**
+- **#150 – [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)**
 
 
 # 5. **Linked Lists**  
@@ -100,7 +100,7 @@
 
 ### **Hard**  
 - **#25 – [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)** 
-- **#23 – [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) ![ref1]**
+- **#23 – [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)**
 
 
 # 6. **Trees (Binary Trees & BSTs)**  
@@ -135,7 +135,7 @@
 - **#99 – [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)** 
 - **#124 – [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)** 
 - **#297 – [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)** 
-- **#968 – [Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/) ![ref1]**
+- **#968 – [Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/)**
 
 
 # 7. **Graphs**  
@@ -166,7 +166,7 @@
 - **#269 –[ Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)** 
 - **#212 – [Word Search II](https://leetcode.com/problems/word-search-ii/)** 
 - **#1192 – [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/)** 
-- **#721 – [Accounts Merge](https://leetcode.com/problems/accounts-merge/) ![ref1]**
+- **#721 – [Accounts Merge](https://leetcode.com/problems/accounts-merge/)**
 
 
 # 8. **Heaps & Priority Queues**  
@@ -176,7 +176,7 @@
 - **#973 – [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)** 
 
 ### **Hard**  
-- **#295 – [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) ![ref1]**
+- **#295 – [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)**
 
 
 # 9. **Greedy**  
@@ -186,7 +186,7 @@
 - **#406 – [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/)** 
 - **#452 – [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)** 
 - **#621 –[ Task Scheduler](https://leetcode.com/problems/task-scheduler/)** 
-- **#135 – [Candy](https://leetcode.com/problems/candy/) ![ref1]**
+- **#135 – [Candy](https://leetcode.com/problems/candy/)**
 
 
 # 10. **Dynamic Programming**  
@@ -229,7 +229,7 @@
 - **#730 – [Count Different Palindromic Subsequences](https://leetcode.com/problems/count-different-palindromic-subsequences/)** 
 - **#1000 – [Minimum Cost to Merge Stones](https://leetcode.com/problems/minimum-cost-to-merge-stones/)** 
 - **#920 – [Number of Music Playlists](https://leetcode.com/problems/number-of-music-playlists/)** 
-- **#689 – [Maximum Sum of 3 Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/) ![ref1]**
+- **#689 – [Maximum Sum of 3 Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/)**
 
 
 # 11. **Backtracking**  
@@ -253,7 +253,7 @@
 - **#301 –[ Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)** 
 - **#282 – [Expression Add Operators](https://leetcode.com/problems/expression-add-operators/)** 
 - **#140 – [Word Break II](https://leetcode.com/problems/word-break-ii/)** 
-- **#79 – [Word Search](https://leetcode.com/problems/word-search/) ![ref1]**
+- **#79 – [Word Search](https://leetcode.com/problems/word-search/)**
 
 # 12. **System Design**  
 ### **Easy**  
