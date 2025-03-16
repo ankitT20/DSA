@@ -37,11 +37,11 @@
 - **#278 – [First Bad Version](https://leetcode.com/problems/first-bad-version/)** 
 - **#35 – [Search Insert Position](https://leetcode.com/problems/search-insert-position/)** 
 
-### ### **Medium**  
+### **Medium**  
 - **#34 – [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)** 
 - **#162 – [Find Peak Element](https://leetcode.com/problems/find-peak-element/)** 
 
-### ### **Hard**  
+### **Hard**  
 - **#4 – [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)**
 
 
@@ -51,7 +51,7 @@
 - **#283 – [Move Zeroes](https://leetcode.com/problems/move-zeroes/)** 
 - **#977 – [Squared Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)** 
 
-# ### **Medium**   
+### **Medium**  
 - **#16 – [3Sum Closest](https://leetcode.com/problems/3sum-closest/)** 
 - **#18 – [4Sum](https://leetcode.com/problems/4sum/)** 
 - **#438 – [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)** 
@@ -61,13 +61,13 @@
 - **#1004 – [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)** 
 - **#75 – [Sort Colors](https://leetcode.com/problems/sort-colors/)** 
 
-# ### **Hard**   
+### **Hard**  
 - **#239 – [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)** 
 - **#992 – [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/)**
 
 
 # 4. **Stacks & Queues**  
-# ### **Easy**  
+### **Easy**  
 - **#20 – [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)** 
 - **#155 – [Min Stack](https://leetcode.com/problems/min-stack/)** 
 - **#232 – [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)** 
